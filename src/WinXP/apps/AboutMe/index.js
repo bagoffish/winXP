@@ -79,6 +79,7 @@ function AboutMe({ onClose }) {
 
         <div className="ie__function_bar__button--disable">
           <img className="ie__function_bar__icon" src={forward} alt="" />
+          <div className="ie__function_bar__arrow" />
         </div>
 
         <div className="ie__function_bar__button">
@@ -124,11 +125,7 @@ function AboutMe({ onClose }) {
         <div className="ie__function_bar__separate" />
 
         <div className="ie__function_bar__button">
-          <img
-            className="ie__function_bar__icon--margin-1"
-            src={mail}
-            alt=""
-          />
+          <img className="ie__function_bar__icon--margin-1" src={mail} alt="" />
           <div className="ie__function_bar__arrow--margin-11" />
         </div>
 
@@ -190,9 +187,14 @@ function AboutMe({ onClose }) {
           <img className="ie__footer__status__img" src={ie} alt="" />
           <span className="ie__footer__status__text">Done</span>
         </div>
+        <div className="ie__footer__block" />
+        <div className="ie__footer__block" />
+        <div className="ie__footer__block" />
+        <div className="ie__footer__block" />
         <div className="ie__footer__right">
           <img className="ie__footer__right__img" src={earth} alt="" />
           <span className="ie__footer__right__text">Internet</span>
+          <div className="ie__footer__right__dots" />
         </div>
       </footer>
     </Div>
@@ -216,6 +218,10 @@ but I hope that’s understood.
 I’m a beginner artist, guitarist, and composer.
 I’m deeply into philosophy — an optimistic nihilist and an antinatalist;
 favorite philosophers are Wittgenstein, Cioran, Camus & Sartre.
+I’m a multifandom geek; you could throw buzzwords or questions 
+and I’ll know what you’re talking about.
+Just don’t bother with hypermasculine nonsense like martial arts manwhas 
+or aura hype bullshit.
 
 I like feminine terms, but still use he/him.
 Example: “Ms/Queen/Coy wow he’s pretty.”
@@ -240,9 +246,7 @@ Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
         Alien Nine, Evangelion, Parasyte, Nichijou, 
-        Girls Last Tour, Haibane Renmei
-
-→ Serial Experiments Lain`,
+        Girls Last Tour, Haibane Renmei`,
     [],
   );
 
@@ -250,11 +254,10 @@ Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
     <div className="aboutwrap">
       <pre className="aboutpre">{aboutText}</pre>
 
-      {/* clickable link line (kept aligned/clean with same font) */}
       <button
         type="button"
         className="aboutlink-button"
-        onClick={() => onOpenLain()}
+        onClick={onOpenLain}
       >
         Serial Experiments Lain
       </button>
@@ -284,17 +287,307 @@ function LainPage({ onBack }) {
 const Div = styled.div`
   height: 100%;
   width: 100%;
+  position: absolute;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   background: linear-gradient(to right, #edede5 0%, #ede8cd 100%);
 
+  /* ---- IE chrome ---- */
+  .ie__toolbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    line-height: 100%;
+    height: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    flex-shrink: 0;
+  }
+  .ie__options {
+    height: 23px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    padding-left: 2px;
+    flex: 1;
+  }
+  .ie__windows-logo {
+    height: 100%;
+    border-left: 1px solid white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .ie__function_bar {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    padding: 1px 3px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
+
+  .ie__function_bar__button {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+  }
+  .ie__function_bar__button:hover {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+  }
+  .ie__function_bar__button:hover:active {
+    border: 1px solid rgb(185, 185, 185);
+    background-color: #dedede;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.7);
+  }
+  .ie__function_bar__button:hover:active > * {
+    transform: translate(1px, 1px);
+  }
+
+  .ie__function_bar__button--disable {
+    filter: grayscale(1);
+    opacity: 0.7;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+  }
+
+  .ie__function_bar__text {
+    margin-right: 4px;
+  }
+
+  .ie__function_bar__icon {
+    height: 30px;
+    width: 30px;
+  }
+  .ie__function_bar__icon--normalize {
+    height: 22px;
+    width: 22px;
+    margin: 0 4px 0 1px;
+  }
+  .ie__function_bar__icon--margin12 {
+    height: 22px;
+    width: 22px;
+    margin: 0 1px 0 2px;
+  }
+  .ie__function_bar__icon--margin-1 {
+    margin: 0 -1px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .ie__function_bar__separate {
+    height: 90%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 0 2px;
+  }
+
+  .ie__function_bar__arrow {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 4px;
+  }
+  .ie__function_bar__arrow:before {
+    content: "";
+    display: block;
+    border-width: 3px 3px 0;
+    border-color: #000 transparent;
+    border-style: solid;
+  }
+
+  .ie__function_bar__arrow--margin-11 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 1px 0 -1px;
+  }
+  .ie__function_bar__arrow--margin-11:before {
+    content: "";
+    display: block;
+    border-width: 3px 3px 0;
+    border-color: #000 transparent;
+    border-style: solid;
+  }
+
+  .ie__address_bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    height: 22px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    padding: 0 2px 2px;
+    box-shadow: inset 0 -2px 3px -1px #2d2d2d;
+    flex-shrink: 0;
+  }
+
+  .ie__address_bar__title {
+    line-height: 100%;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+  }
+
+  .ie__address_bar__content {
+    border: rgba(122, 122, 255, 0.6) 1px solid;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background-color: white;
+    position: relative;
+  }
+  .ie__address_bar__content__img {
+    width: 14px;
+    height: 14px;
+  }
+  .ie__address_bar__content__img:last-child {
+    width: 15px;
+    height: 15px;
+    right: 1px;
+    position: absolute;
+  }
+  .ie__address_bar__content__text {
+    position: absolute;
+    white-space: nowrap;
+    left: 16px;
+    right: 17px;
+    overflow: hidden;
+  }
+
+  .ie__address_bar__go {
+    display: flex;
+    align-items: center;
+    padding: 0 18px 0 5px;
+    height: 100%;
+    position: relative;
+  }
+  .ie__address_bar__go__img {
+    height: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-right: 3px;
+  }
+
+  .ie__address_bar__separate {
+    height: 100%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .ie__address_bar__links {
+    display: flex;
+    align-items: center;
+    padding: 0 18px 0 5px;
+    height: 100%;
+    position: relative;
+  }
+  .ie__address_bar__links__img {
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    height: 5px;
+    width: 8px;
+  }
+  .ie__address_bar__links__text {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .ie__content {
+    flex: 1;
+    overflow: auto;
+    padding-left: 1px;
+    border-left: 1px solid #6f6f6f;
+    background-color: #f1f1f1;
+    position: relative;
+  }
+
+  .ie__content__inner {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background: #fff;
+  }
+
+  .ie__footer {
+    height: 20px;
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 3px rgba(50, 50, 50, 0.8);
+    background-color: rgb(236, 233, 216);
+    display: flex;
+    align-items: center;
+    padding-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .ie__footer__status {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+  }
+  .ie__footer__status__text {
+    font-size: 11px;
+  }
+  .ie__footer__status__img {
+    height: 14px;
+    width: 14px;
+    margin-right: 3px;
+  }
+
+  .ie__footer__block {
+    height: 85%;
+    width: 22px;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  .ie__footer__right {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 80%;
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    box-shadow: inset 1px 0 rgba(255, 255, 255, 0.7);
+    padding-left: 5px;
+    position: relative;
+  }
+  .ie__footer__right__text {
+    font-size: 11px;
+  }
+  .ie__footer__right__img {
+    height: 14px;
+    width: 14px;
+    margin-right: 3px;
+  }
+  .ie__footer__right__dots {
+    position: absolute;
+    right: 11px;
+    bottom: -1px;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0px rgba(0, 0, 0, 0.25),
+      5.5px 0px rgba(0, 0, 0, 0.25), 9px 0px rgba(0, 0, 0, 0.25),
+      5.5px -3.5px rgba(0, 0, 0, 0.25), 9px -3.5px rgba(0, 0, 0, 0.25),
+      9px -7px rgba(0, 0, 0, 0.25), 3px 1px rgba(255, 255, 255, 1),
+      6.5px 1px rgba(255, 255, 255, 1), 10px 1px rgba(255, 255, 255, 1),
+      10px -2.5px rgba(255, 255, 255, 1), 10px -6px rgba(255, 255, 255, 1);
+  }
+
+  /* ---- About page ---- */
   .aboutwrap {
     padding: 10px;
+    box-sizing: border-box;
     font-family: "Courier New", monospace;
     font-size: 12px;
     line-height: 1.35;
-    background: #fff;
     color: #000;
+    background: #fff;
   }
 
   .aboutpre {
@@ -317,14 +610,17 @@ const Div = styled.div`
     text-decoration: underline;
   }
 
+  /* ---- Lain page ---- */
   .lainwrap {
     height: 100%;
     background: #fff;
     position: relative;
+    min-height: 600px;
   }
 
   .lainbg {
     height: 100%;
+    min-height: 600px;
     background: #fff url("/images/lain.gif") center / contain no-repeat;
   }
 
@@ -333,6 +629,7 @@ const Div = styled.div`
     left: 8px;
     bottom: 8px;
     font-size: 12px;
+    font-family: Tahoma, Verdana, sans-serif;
   }
 
   .lainback a {
