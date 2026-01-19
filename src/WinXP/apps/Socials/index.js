@@ -154,8 +154,6 @@ function Socials({ onClose }) {
       <div className="ie__content">
         <div className="ie__content__inner">
           <div className="page">
-            </pre>
-
             <div className="links">
               <a
                 href="https://steamcommunity.com/id/coyslop/"
@@ -199,7 +197,11 @@ function Socials({ onClose }) {
               >
                 Spotify Artist
               </a>
-              <a href="https://time.is/KST" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://time.is/KST"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 My Time Zone
               </a>
               <a
@@ -496,13 +498,6 @@ const Div = styled.div`
     font-family: "Courier New", monospace;
     background: #fff;
     color: #000;
-  }
-
-  .ascii {
-    margin: 0 0 10px 0;
-    white-space: pre-wrap;
-    font-size: 12px;
-    line-height: 1.35;
   }
 
   .links a {
