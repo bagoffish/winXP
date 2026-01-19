@@ -21,18 +21,7 @@ export default function Poems({ onClose }) {
   }
 
   const poemsText = useMemo(
-    () => `88888b.   .d88b.   .d88b.  88888b.d88b.  .d8888b 
-888 "88b d88""88b d8P  Y8b 888 "888 "88b 88K     
-888  888 888  888 88888888 888  888  888 "Y8888b.
-888 d88P Y88..88P Y8b.     888  888  888      X88
-88888P"   "Y88P"   "Y8888  888  888  888  88888P'
-888
-888
-888
-
-────────────────────────────────────────────
-
-Chrysalis of Light
+    () => `Chrysalis of Light
 
 The walls close in like iron ribs,
 a cage of silk and trembling dark.
