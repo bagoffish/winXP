@@ -86,7 +86,11 @@ function AboutMe({ onClose }) {
         </div>
 
         <div className="ie__function_bar__button">
-          <img className="ie__function_bar__icon--margin-1" src={refresh} alt="" />
+          <img
+            className="ie__function_bar__icon--margin-1"
+            src={refresh}
+            alt=""
+          />
         </div>
 
         <div className="ie__function_bar__button" onClick={goAbout}>
@@ -141,11 +145,7 @@ function AboutMe({ onClose }) {
         </div>
 
         <div className="ie__function_bar__button">
-          <img
-            className="ie__function_bar__icon--margin12"
-            src={msn}
-            alt=""
-          />
+          <img className="ie__function_bar__icon--margin12" src={msn} alt="" />
         </div>
       </section>
 
@@ -200,10 +200,8 @@ function AboutMe({ onClose }) {
 }
 
 function AboutPage({ onOpenLain }) {
-  return (
-    <div className="aboutwrap">
-      <pre className="aboutpre">
-{`My name is Coy (or Bag of Fish).
+  const aboutText = useMemo(
+    () => `My name is Coy (or Bag of Fish).
 
 I won’t list anything majorly personal here; I believe you should learn from me.
 If that deters you in any way, I think you should walk along, 
@@ -218,10 +216,6 @@ but I hope that’s understood.
 I’m a beginner artist, guitarist, and composer.
 I’m deeply into philosophy — an optimistic nihilist and an antinatalist;
 favorite philosophers are Wittgenstein, Cioran, Camus & Sartre.
-I’m a multifandom geek; you could throw buzzwords or questions 
-and I’ll know what you’re talking about.
-Just don’t bother with hypermasculine nonsense like martial arts manwhas 
-or aura hype bullshit.
 
 I like feminine terms, but still use he/him.
 Example: “Ms/Queen/Coy wow he’s pretty.”
@@ -246,20 +240,24 @@ Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
         Alien Nine, Evangelion, Parasyte, Nichijou, 
-        Girls Last Tour, Haibane Renmei`}
-        <a
-          href="#"
-          className="aboutlink-inline"
-          onClick={(e) => {
-            e.preventDefault();
-            onOpenLain();
-          }}
-        >
-          Serial Experiments Lain
-        </a>
-{`
-`}
-      </pre>
+        Girls Last Tour, Haibane Renmei
+
+→ Serial Experiments Lain`,
+    [],
+  );
+
+  return (
+    <div className="aboutwrap">
+      <pre className="aboutpre">{aboutText}</pre>
+
+      {/* clickable link line (kept aligned/clean with same font) */}
+      <button
+        type="button"
+        className="aboutlink-button"
+        onClick={() => onOpenLain()}
+      >
+        Serial Experiments Lain
+      </button>
     </div>
   );
 }
@@ -296,6 +294,7 @@ const Div = styled.div`
     font-size: 12px;
     line-height: 1.35;
     background: #fff;
+    color: #000;
   }
 
   .aboutpre {
@@ -303,13 +302,18 @@ const Div = styled.div`
     white-space: pre-wrap;
   }
 
-  .aboutlink-inline {
+  .aboutlink-button {
+    margin-top: 6px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
     color: #0000ee;
-    text-decoration: none;
+    text-align: left;
     cursor: pointer;
   }
 
-  .aboutlink-inline:hover {
+  .aboutlink-button:hover {
     text-decoration: underline;
   }
 
@@ -329,6 +333,11 @@ const Div = styled.div`
     left: 8px;
     bottom: 8px;
     font-size: 12px;
+  }
+
+  .lainback a {
+    color: #0000ee;
+    text-decoration: underline;
   }
 `;
 
