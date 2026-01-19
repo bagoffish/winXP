@@ -158,15 +158,6 @@ function Socials({ onClose }) {
       <div className="ie__content">
         <div className="ie__content__inner">
           <div className="page">
-            <pre className="ascii">
-{`                           d8b          888          
-                           Y8P          888          
-                                        888          
-.d8888b   .d88b.   .d8888b 888  8888b.  888 .d8888b  
-88K      d88""88b d88P"    888     "88b 888 88K      
-"Y8888b. 888  888 888      888 .d888888 888 "Y8888b. 
-     X88 Y88..88P Y88b.    888 888  888 888      X88 
- 88888P'  "Y88P"   "Y8888P 888 "Y888888 888  88888P'`}
             </pre>
 
             <div className="links">
