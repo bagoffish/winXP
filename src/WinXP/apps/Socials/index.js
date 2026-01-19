@@ -154,9 +154,7 @@ function Socials({ onClose }) {
       <div className="ie__content">
         <div className="ie__content__inner">
           <div className="page">
-            <pre className="ascii">{`Socials
-
-────────────`}</pre>
+            </pre>
 
             <div className="links">
               <a
