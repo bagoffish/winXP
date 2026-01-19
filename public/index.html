@@ -13,27 +13,33 @@
     <meta name="theme-color" content="#fff" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <!-- title -->
+    <!-- title (intentional blank-style title) -->
     <title>‎‎‎‎‎‎‎‎ㅤ</title>
 
-    <!-- favicon -->
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- favicon (cache-safe versioned file) -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon-v2.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon-v2.ico" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon-v2.ico" />
+
+    <!-- absolute fallback -->
+    <link rel="icon" href="/favicon-v2.ico" />
+    <link rel="shortcut icon" href="/favicon-v2.ico" />
 
     <!-- manifest -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <!-- your existing site styles -->
+    <!-- styles -->
     <link rel="stylesheet" href="%PUBLIC_URL%/css/main.css" />
-
-    <!-- XP desktop styles -->
     <link rel="stylesheet" href="%PUBLIC_URL%/css/xp.css" />
 
-    <!-- Open Graph -->
-    <meta property="og:image" content="%PUBLIC_URL%/images/icon.png" />
-    <meta property="og:url" content="https://bagof.fish" />
+    <!-- Discord / Open Graph preview -->
+    <meta property="og:title" content="bagof.fish" />
+    <meta property="og:description" content="artwork by iluvrabbitz/grace" />
+    <meta property="og:image" content="https://bagof.fish/images/1.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="905" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bagof.fish" />
   </head>
 
   <body>
