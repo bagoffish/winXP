@@ -14,7 +14,7 @@
       "headers": { "cache-control": "s-maxage=31536000,immutable" },
       "dest": "/static/$1"
     },
-    { "src": "/favicon.ico", "dest": "/favicon.ico" },
+    { "src": "/public/favicon.ico", "dest": "/public/favicon.ico" },
     { "src": "/asset-manifest.json", "dest": "/asset-manifest.json" },
     { "src": "/manifest.json", "dest": "/manifest.json" },
     {
