@@ -236,10 +236,6 @@ but I hope that’s understood.
 I’m a beginner artist, guitarist, and composer.
 I’m deeply into philosophy — an optimistic nihilist and an antinatalist;
 favorite philosophers are Wittgenstein, Cioran, Camus & Sartre.
-I’m a multifandom geek; you could throw buzzwords or questions 
-and I’ll know what you’re talking about.
-Just don’t bother with hypermasculine nonsense like martial arts manwhas 
-or aura hype bullshit.
 
 I like feminine terms, but still use he/him.
 Example: “Ms/Queen/Coy wow he’s pretty.”
