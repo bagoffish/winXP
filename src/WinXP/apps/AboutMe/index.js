@@ -221,29 +221,28 @@ function AboutMe({ onClose }) {
   );
 }
 
-const ABOUT_TEXT_BEFORE = `My name is Coy (or Bag of Fish).
+const ABOUT_TEXT_BEFORE = `My name is Coy (Or Bag of Fish)
 
-I won’t list anything majorly personal here; I believe you should learn from me.
+I won't list anything majorly personal here; I believe you should learn from me.
 If that deters you in any way, I think you should walk along, 
-as I’ll probably find something about you that is obnoxious.
+as I'll probably find something about you that is obnoxious.
 
-Due to past experiences online, I tend to be abrasive and make assumptions about people, 
-mainly when I see traits I strongly dislike.
-Just talk to me how you’d introduce yourself to someone IRL and you’ll be fine.
-I’m not great at reading the room and I may ruin moments unintentionally, 
-but I hope that’s understood.
+Due to past experiences online, I tend to be abrasive and make assumptions about other people, 
+mainly because I see traits of someone that are exhibited that I don't like. 
+Just talk to me like how you would introduce yourself to someone irl, and you're fine.
+I'm not the best at reading the room and I may ruin your moments but I hope you understand.
 
-I’m a beginner artist, guitarist, and composer.
-I’m deeply into philosophy — an optimistic nihilist and an antinatalist;
-favorite philosophers are Wittgenstein, Cioran, Camus & Sartre.
+I'm a beginner artist, guitarist & a composer. 
+I'm deeply into philosophy; I'm an optimistic nihilist & an antinatalist.
+My favorite philosophers are Wittgenstein, Cioran, Camus & Sartre. (In order)
 
-I like feminine terms, but still use he/him.
-Example: “Ms/Queen/Coy wow he’s pretty.”
-Don’t glaze me like that unjokingly — that’s a little weird.
+I like feminine terms, but still call me a he. 
+i.e "Ms/Queen/whateverthehell Coy wow, he's so pretty" 
+but don't glaze me like that unjokingly, I think that's a little weird.
 
-I’m fine with adults interacting with me if you aren’t a creep.
-That’s all I’ll say due to limited space — just talk to me 
-if you’re interested. If normal, there’s zero biting.
+I'm fine with adults interacting with me if you aren't a creep.
+That's all I'll say due to limited space, just talk to me if you're interested. 
+If normal, there's 0 biting.
 
 INTERESTS —
 Hobbies: Playing guitar, writing, photographing, illustrating & dissecting
