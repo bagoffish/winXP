@@ -147,28 +147,70 @@ function Socials({ onClose }) {
 
         <div className="ie__address_bar__links">
           <span className="ie__address_bar__links__text">Links</span>
-          <img
-            className="ie__address_bar__links__img"
-            src={links}
-            alt="links"
-          />
+          <img className="ie__address_bar__links__img" src={links} alt="links" />
         </div>
       </section>
 
       <div className="ie__content">
         <div className="ie__content__inner">
           <div className="page">
-            </pre>
+            <pre className="ascii">{`Socials
+
+────────────`}</pre>
 
             <div className="links">
-              <a href="https://steamcommunity.com/id/coyslop/" target="_blank" rel="noopener noreferrer">Steam</a>
-              <a href="https://open.spotify.com/user/31c5k3olrsrvyfeldxjvklzs7omy" target="_blank" rel="noopener noreferrer">Spotify</a>
-              <a href="https://www.last.fm/user/kinoue64" target="_blank" rel="noopener noreferrer">Last.fm</a>
-              <a href="https://gaori.bandcamp.com/" target="_blank" rel="noopener noreferrer">BandCamp</a>
-              <a href="https://soundcloud.com/bagoffish" target="_blank" rel="noopener noreferrer">SoundCloud</a>
-              <a href="https://open.spotify.com/artist/77fGu7QlD44vM2qbcggFOd" target="_blank" rel="noopener noreferrer">Spotify Artist</a>
-              <a href="https://time.is/KST" target="_blank" rel="noopener noreferrer">My Time Zone</a>
-              <a href="https://rateyourmusic.com/artist/coy-2" target="_blank" rel="noopener noreferrer">Rate Your Music</a>
+              <a
+                href="https://steamcommunity.com/id/coyslop/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Steam
+              </a>
+              <a
+                href="https://open.spotify.com/user/31c5k3olrsrvyfeldxjvklzs7omy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify
+              </a>
+              <a
+                href="https://www.last.fm/user/kinoue64"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Last.fm
+              </a>
+              <a
+                href="https://gaori.bandcamp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BandCamp
+              </a>
+              <a
+                href="https://soundcloud.com/bagoffish"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SoundCloud
+              </a>
+              <a
+                href="https://open.spotify.com/artist/77fGu7QlD44vM2qbcggFOd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify Artist
+              </a>
+              <a href="https://time.is/KST" target="_blank" rel="noopener noreferrer">
+                My Time Zone
+              </a>
+              <a
+                href="https://rateyourmusic.com/artist/coy-2"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rate Your Music
+              </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
           </div>
