@@ -191,18 +191,18 @@ function Socials({ onClose }) {
                 SoundCloud
               </a>
               <a
-                href="https://open.spotify.com/artist/77fGu7QlD44vM2qbcggFOd"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Spotify Artist
-              </a>
-              <a
                 href="https://time.is/KST"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 My Time Zone
+              </a>
+              <a
+                href="https://open.spotify.com/artist/77fGu7QlD44vM2qbcggFOd"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Spotify Artist
               </a>
               <a
                 href="https://rateyourmusic.com/artist/coy-2"
