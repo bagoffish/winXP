@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { WindowDropDowns } from "components";
 import dropDownData from "./dropDownData";
 
-/* icons */
+// IE icons
 import ie from "assets/windowsIcons/ie-paper.png";
 import printer from "assets/windowsIcons/17(32x32).png";
 import go from "assets/windowsIcons/290.png";
@@ -27,12 +27,10 @@ import dropdown from "assets/windowsIcons/dropdown.png";
 function AboutMe({ onClose }) {
   const [route, setRoute] = useState("about"); // "about" | "lain"
 
-  function goAbout() {
-    setRoute("about");
-  }
-  function goLain() {
-    setRoute("lain");
-  }
+  const addressText = useMemo(() => {
+    if (route === "lain") return "https://bagof.fish/about-me#lain";
+    return "https://bagof.fish/about-me";
+  }, [route]);
 
   function onClickOptionItem(item) {
     switch (item) {
@@ -41,16 +39,19 @@ function AboutMe({ onClose }) {
         break;
       case "Home Page":
       case "Back":
-        goAbout();
+        setRoute("about");
         break;
       default:
     }
   }
 
-  const addressText = useMemo(() => {
-    if (route === "lain") return "https://bagof.fish/about-me#lain";
-    return "https://bagof.fish/about-me";
-  }, [route]);
+  function goAbout() {
+    setRoute("about");
+  }
+
+  function goLain() {
+    setRoute("lain");
+  }
 
   return (
     <Div>
@@ -67,10 +68,10 @@ function AboutMe({ onClose }) {
 
       <section className="ie__function_bar">
         <div
-          onClick={goAbout}
           className={`ie__function_bar__button${
             route === "about" ? "--disable" : ""
           }`}
+          onClick={route === "about" ? undefined : goAbout}
         >
           <img className="ie__function_bar__icon" src={back} alt="" />
           <span className="ie__function_bar__text">Back</span>
@@ -82,11 +83,11 @@ function AboutMe({ onClose }) {
           <div className="ie__function_bar__arrow" />
         </div>
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img className="ie__function_bar__icon--margin-1" src={stop} alt="" />
         </div>
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img
             className="ie__function_bar__icon--margin-1"
             src={refresh}
@@ -94,13 +95,16 @@ function AboutMe({ onClose }) {
           />
         </div>
 
-        <div className="ie__function_bar__button" onClick={goAbout}>
+        <div
+          className="ie__function_bar__button--disable"
+          title="Home"
+        >
           <img className="ie__function_bar__icon--margin-1" src={home} alt="" />
         </div>
 
         <div className="ie__function_bar__separate" />
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img
             className="ie__function_bar__icon--normalize"
             src={search}
@@ -109,7 +113,7 @@ function AboutMe({ onClose }) {
           <span className="ie__function_bar__text">Search</span>
         </div>
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img
             className="ie__function_bar__icon--normalize"
             src={favorite}
@@ -118,18 +122,18 @@ function AboutMe({ onClose }) {
           <span className="ie__function_bar__text">Favorites</span>
         </div>
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img className="ie__function_bar__icon" src={history} alt="" />
         </div>
 
         <div className="ie__function_bar__separate" />
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img className="ie__function_bar__icon--margin-1" src={mail} alt="" />
           <div className="ie__function_bar__arrow--margin-11" />
         </div>
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img
             className="ie__function_bar__icon--margin12"
             src={printer}
@@ -141,7 +145,7 @@ function AboutMe({ onClose }) {
           <img className="ie__function_bar__icon" src={edit} alt="" />
         </div>
 
-        <div className="ie__function_bar__button">
+        <div className="ie__function_bar__button--disable">
           <img className="ie__function_bar__icon--margin12" src={msn} alt="" />
         </div>
       </section>
@@ -174,11 +178,28 @@ function AboutMe({ onClose }) {
 
       <div className="ie__content">
         <div className="ie__content__inner">
-          {route === "about" ? (
-            <AboutPage onOpenLain={goLain} />
-          ) : (
-            <LainPage onBack={goAbout} />
-          )}
+          <div className="page">
+            {route === "about" ? (
+              <>
+                <pre className="aboutpre">{ABOUT_TEXT}</pre>
+
+                <button
+                  type="button"
+                  className="aboutlink"
+                  onClick={goLain}
+                >
+                  Serial Experiments Lain
+                </button>
+              </>
+            ) : (
+              <div className="lainwrap">
+                <div className="lainbg" />
+                <button type="button" className="lainback" onClick={goAbout}>
+                  ← back
+                </button>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -201,9 +222,7 @@ function AboutMe({ onClose }) {
   );
 }
 
-function AboutPage({ onOpenLain }) {
-  const aboutText = useMemo(
-    () => `My name is Coy (or Bag of Fish).
+const ABOUT_TEXT = `My name is Coy (or Bag of Fish).
 
 I won’t list anything majorly personal here; I believe you should learn from me.
 If that deters you in any way, I think you should walk along, 
@@ -246,43 +265,7 @@ Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
         Alien Nine, Evangelion, Parasyte, Nichijou, 
-        Girls Last Tour, Haibane Renmei`,
-    [],
-  );
-
-  return (
-    <div className="aboutwrap">
-      <pre className="aboutpre">{aboutText}</pre>
-
-      <button
-        type="button"
-        className="aboutlink-button"
-        onClick={onOpenLain}
-      >
-        Serial Experiments Lain
-      </button>
-    </div>
-  );
-}
-
-function LainPage({ onBack }) {
-  return (
-    <div className="lainwrap">
-      <div className="lainbg" />
-      <div className="lainback">
-        <a
-          href="#"
-          onClick={(e) => {
-            e.preventDefault();
-            onBack();
-          }}
-        >
-          ← back
-        </a>
-      </div>
-    </div>
-  );
-}
+        Girls Last Tour, Haibane Renmei`;
 
 const Div = styled.div`
   height: 100%;
@@ -293,7 +276,7 @@ const Div = styled.div`
   flex-direction: column;
   background: linear-gradient(to right, #edede5 0%, #ede8cd 100%);
 
-  /* ---- IE chrome ---- */
+  /* ---- IE chrome (copied from your Socials layout) ---- */
   .ie__toolbar {
     position: relative;
     display: flex;
@@ -315,7 +298,6 @@ const Div = styled.div`
     border-left: 1px solid white;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
   .ie__function_bar {
     height: 36px;
     display: flex;
@@ -323,7 +305,17 @@ const Div = styled.div`
     font-size: 11px;
     padding: 1px 3px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
+  }
+  .ie__function_bar__button--disable {
+    filter: grayscale(1);
+    opacity: 0.7;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0);
+  }
+  .ie__function_bar__button--disable > * {
+    pointer-events: none;
   }
 
   .ie__function_bar__button {
@@ -332,34 +324,16 @@ const Div = styled.div`
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 3px;
+    cursor: pointer;
   }
   .ie__function_bar__button:hover {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1);
   }
-  .ie__function_bar__button:hover:active {
-    border: 1px solid rgb(185, 185, 185);
-    background-color: #dedede;
-    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.7);
-  }
-  .ie__function_bar__button:hover:active > * {
-    transform: translate(1px, 1px);
-  }
-
-  .ie__function_bar__button--disable {
-    filter: grayscale(1);
-    opacity: 0.7;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 3px;
-  }
 
   .ie__function_bar__text {
     margin-right: 4px;
   }
-
   .ie__function_bar__icon {
     height: 30px;
     width: 30px;
@@ -379,14 +353,12 @@ const Div = styled.div`
     height: 30px;
     width: 30px;
   }
-
   .ie__function_bar__separate {
     height: 90%;
     width: 1px;
     background-color: rgba(0, 0, 0, 0.2);
     margin: 0 2px;
   }
-
   .ie__function_bar__arrow {
     height: 100%;
     display: flex;
@@ -400,7 +372,6 @@ const Div = styled.div`
     border-color: #000 transparent;
     border-style: solid;
   }
-
   .ie__function_bar__arrow--margin-11 {
     height: 100%;
     display: flex;
@@ -423,15 +394,12 @@ const Div = styled.div`
     align-items: center;
     padding: 0 2px 2px;
     box-shadow: inset 0 -2px 3px -1px #2d2d2d;
-    flex-shrink: 0;
   }
-
   .ie__address_bar__title {
     line-height: 100%;
     color: rgba(0, 0, 0, 0.5);
     padding: 5px;
   }
-
   .ie__address_bar__content {
     border: rgba(122, 122, 255, 0.6) 1px solid;
     height: 100%;
@@ -458,7 +426,6 @@ const Div = styled.div`
     right: 17px;
     overflow: hidden;
   }
-
   .ie__address_bar__go {
     display: flex;
     align-items: center;
@@ -471,14 +438,12 @@ const Div = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.2);
     margin-right: 3px;
   }
-
   .ie__address_bar__separate {
     height: 100%;
     width: 1px;
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 1px 0 rgba(255, 255, 255, 0.7);
   }
-
   .ie__address_bar__links {
     display: flex;
     align-items: center;
@@ -505,12 +470,12 @@ const Div = styled.div`
     background-color: #f1f1f1;
     position: relative;
   }
-
   .ie__content__inner {
     position: relative;
+    min-height: 800px;
+    min-width: 800px;
     width: 100%;
-    min-height: 100%;
-    background: #fff;
+    height: 100%;
   }
 
   .ie__footer {
@@ -521,9 +486,7 @@ const Div = styled.div`
     display: flex;
     align-items: center;
     padding-top: 2px;
-    flex-shrink: 0;
   }
-
   .ie__footer__status {
     flex: 1;
     height: 100%;
@@ -539,14 +502,12 @@ const Div = styled.div`
     width: 14px;
     margin-right: 3px;
   }
-
   .ie__footer__block {
     height: 85%;
     width: 22px;
     border-left: 1px solid rgba(0, 0, 0, 0.15);
     box-shadow: inset 1px 0 rgba(255, 255, 255, 0.7);
   }
-
   .ie__footer__right {
     display: flex;
     align-items: center;
@@ -579,47 +540,47 @@ const Div = styled.div`
       10px -2.5px rgba(255, 255, 255, 1), 10px -6px rgba(255, 255, 255, 1);
   }
 
-  /* ---- About page ---- */
-  .aboutwrap {
+  /* ---- Content page ---- */
+  .page {
     padding: 10px;
+    height: 100%;
+    overflow: auto;
     box-sizing: border-box;
     font-family: "Courier New", monospace;
-    font-size: 12px;
-    line-height: 1.35;
-    color: #000;
     background: #fff;
+    color: #000;
   }
 
   .aboutpre {
     margin: 0;
     white-space: pre-wrap;
+    font-size: 12px;
+    line-height: 1.35;
   }
 
-  .aboutlink-button {
-    margin-top: 6px;
+  /* clean link aligned with text */
+  .aboutlink {
+    margin-top: 8px;
     padding: 0;
     border: 0;
     background: transparent;
     font: inherit;
+    font-size: 12px;
     color: #0000ee;
-    text-align: left;
-    cursor: pointer;
-  }
-
-  .aboutlink-button:hover {
     text-decoration: underline;
+    cursor: pointer;
+    display: inline-block;
   }
 
-  /* ---- Lain page ---- */
   .lainwrap {
-    height: 100%;
-    background: #fff;
-    position: relative;
+    width: 100%;
     min-height: 600px;
+    position: relative;
+    background: #fff;
   }
 
   .lainbg {
-    height: 100%;
+    width: 100%;
     min-height: 600px;
     background: #fff url("/images/lain.gif") center / contain no-repeat;
   }
@@ -628,13 +589,14 @@ const Div = styled.div`
     position: absolute;
     left: 8px;
     bottom: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font: inherit;
     font-size: 12px;
-    font-family: Tahoma, Verdana, sans-serif;
-  }
-
-  .lainback a {
     color: #0000ee;
     text-decoration: underline;
+    cursor: pointer;
   }
 `;
 
