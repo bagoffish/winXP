@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "^/(favicon\\.ico|manifest\\.json|static/.*|css/.*|images/.*)$",
+      "destination": "/$1",
+      "type": 200
+    },
+    {
       "source": "/(.*)",
       "destination": "/",
       "type": 302
