@@ -1,36 +1,25 @@
-import Minesweeper from './Minesweeper';
-import ErrorBox from './ErrorBox';
-import MyComputer from './MyComputer';
-import Notepad from './Notepad';
-import Winamp from './Winamp';
-import Paint from './Paint';
-
-/* ===== YOUR CUSTOM APPS (folders in src/WinXP/apps/...) ===== */
-import AboutMe from './AboutMe';
-import Poems from './Poems';
-import Socials from './Socials';
-import Checker from './Checker';
+import AboutMe from "./AboutMe";
+import Checker from "./Checker";
+import ErrorBox from "./ErrorBox";
+import Minesweeper from "./Minesweeper";
+import Paint from "./Paint";
+import Poems from "./Poems";
+import Socials from "./Socials";
 
 /* ===== icons ===== */
-import iePaper from 'assets/windowsIcons/ie-paper.png';
-import ie from 'assets/windowsIcons/ie.png';
-import mine from 'assets/minesweeper/mine-icon.png';
-import error from 'assets/windowsIcons/897(16x16).png';
-import computer from 'assets/windowsIcons/676(16x16).png';
-import computerLarge from 'assets/windowsIcons/676(32x32).png';
-import notepad from 'assets/windowsIcons/327(16x16).png';
-import notepadLarge from 'assets/windowsIcons/327(32x32).png';
-import winamp from 'assets/windowsIcons/winamp.png';
-import paintLarge from 'assets/windowsIcons/680(32x32).png';
-import paint from 'assets/windowsIcons/680(16x16).png';
+import iePaper from "assets/windowsIcons/ie-paper.png";
+import mine from "assets/minesweeper/mine-icon.png";
+import error from "assets/windowsIcons/897(16x16).png";
+import paintLarge from "assets/windowsIcons/680(32x32).png";
+import paintSmall from "assets/windowsIcons/680(16x16).png";
 
-/* use YOUR icons if you have them, otherwise these are fine placeholders */
-import poemsIcon from 'assets/windowsIcons/327(32x32).png';     // notepad-ish
-import poemsIconSmall from 'assets/windowsIcons/327(16x16).png';
-import socialsIcon from 'assets/windowsIcons/ie.png';          // IE-ish
-import socialsIconSmall from 'assets/windowsIcons/ie-paper.png';
-import checkerIcon from 'assets/windowsIcons/299(32x32).png';  // search-ish
-import checkerIconSmall from 'assets/windowsIcons/299(32x32).png';
+/* placeholders for your custom apps */
+import poemsIcon from "assets/windowsIcons/327(32x32).png";
+import poemsIconSmall from "assets/windowsIcons/327(16x16).png";
+import socialsIcon from "assets/windowsIcons/ie.png";
+import socialsIconSmall from "assets/windowsIcons/ie-paper.png";
+import checkerIcon from "assets/windowsIcons/299(32x32).png";
+import checkerIconSmall from "assets/windowsIcons/299(32x32).png";
 
 const gen = () => {
   let id = -1;
@@ -48,7 +37,7 @@ export const defaultAppState = [
   {
     component: AboutMe,
     header: {
-      title: 'About Me',
+      title: "About Me",
       icon: iePaper,
     },
     defaultSize: {
@@ -68,7 +57,7 @@ export const defaultAppState = [
   {
     component: Minesweeper,
     header: {
-      title: 'Minesweeper',
+      title: "Minesweeper",
       icon: mine,
     },
     defaultSize: {
@@ -85,111 +74,49 @@ export const defaultAppState = [
     id: genId(),
     zIndex: genIndex(),
   },
-  {
-    component: Winamp,
-    header: {
-      title: 'Winamp',
-      icon: winamp,
-      invisible: true,
-    },
-    defaultSize: {
-      width: 0,
-      height: 0,
-    },
-    defaultOffset: {
-      x: 0,
-      y: 0,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: false,
-    id: genId(),
-    zIndex: genIndex(),
-  },
-  {
-    component: MyComputer,
-    header: {
-      title: 'My Computer',
-      icon: computer,
-    },
-    defaultSize: {
-      width: 660,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 250,
-      y: 40,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    id: genId(),
-    zIndex: genIndex(),
-  },
 ];
 
 /* desktop icons */
 export const defaultIconState = [
   {
     id: 0,
-    icon: ie,
-    title: 'About Me',
+    icon: iePaper,
+    title: "About Me",
     component: AboutMe,
     isFocus: false,
   },
   {
     id: 1,
     icon: poemsIcon,
-    title: 'Poems',
+    title: "Poems",
     component: Poems,
     isFocus: false,
   },
   {
     id: 2,
     icon: socialsIcon,
-    title: 'Socials',
+    title: "Socials",
     component: Socials,
     isFocus: false,
   },
   {
     id: 3,
     icon: checkerIcon,
-    title: 'Checker',
+    title: "Checker",
     component: Checker,
     isFocus: false,
   },
   {
     id: 4,
     icon: mine,
-    title: 'Minesweeper',
+    title: "Minesweeper",
     component: Minesweeper,
     isFocus: false,
   },
   {
     id: 5,
-    icon: computerLarge,
-    title: 'My Computer',
-    component: MyComputer,
-    isFocus: false,
-  },
-  {
-    id: 6,
-    icon: notepadLarge,
-    title: 'Notepad',
-    component: Notepad,
-    isFocus: false,
-  },
-  {
-    id: 7,
-    icon: winamp,
-    title: 'Winamp',
-    component: Winamp,
-    isFocus: false,
-  },
-  {
-    id: 8,
     icon: paintLarge,
-    title: 'Paint',
+    title: "Paint",
     component: Paint,
     isFocus: false,
   },
@@ -197,10 +124,10 @@ export const defaultIconState = [
 
 /* start menu / openApp settings */
 export const appSettings = {
-  'About Me': {
+  "About Me": {
     header: {
       icon: iePaper,
-      title: 'About Me',
+      title: "About Me",
     },
     component: AboutMe,
     defaultSize: {
@@ -220,7 +147,7 @@ export const appSettings = {
   Poems: {
     header: {
       icon: poemsIconSmall,
-      title: 'Poems',
+      title: "Poems",
     },
     component: Poems,
     defaultSize: {
@@ -240,7 +167,7 @@ export const appSettings = {
   Socials: {
     header: {
       icon: socialsIconSmall,
-      title: 'Socials',
+      title: "Socials",
     },
     component: Socials,
     defaultSize: {
@@ -260,7 +187,7 @@ export const appSettings = {
   Checker: {
     header: {
       icon: checkerIconSmall,
-      title: 'Checker',
+      title: "Checker",
     },
     component: Checker,
     defaultSize: {
@@ -280,7 +207,7 @@ export const appSettings = {
   Minesweeper: {
     header: {
       icon: mine,
-      title: 'Minesweeper',
+      title: "Minesweeper",
     },
     component: Minesweeper,
     defaultSize: {
@@ -300,8 +227,8 @@ export const appSettings = {
   Error: {
     header: {
       icon: error,
-      title: 'C:\\',
-      buttons: ['close'],
+      title: "C:\\",
+      buttons: ["close"],
       noFooterWindow: true,
     },
     component: ErrorBox,
@@ -319,71 +246,10 @@ export const appSettings = {
     multiInstance: true,
   },
 
-  'My Computer': {
-    header: {
-      icon: computer,
-      title: 'My Computer',
-    },
-    component: MyComputer,
-    defaultSize: {
-      width: 660,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 260,
-      y: 50,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    multiInstance: false,
-  },
-
-  Notepad: {
-    header: {
-      icon: notepad,
-      title: 'Untitled - Notepad',
-    },
-    component: Notepad,
-    defaultSize: {
-      width: 660,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 270,
-      y: 60,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    multiInstance: true,
-  },
-
-  Winamp: {
-    header: {
-      icon: winamp,
-      title: 'Winamp',
-      invisible: true,
-    },
-    component: Winamp,
-    defaultSize: {
-      width: 0,
-      height: 0,
-    },
-    defaultOffset: {
-      x: 0,
-      y: 0,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: false,
-    multiInstance: false,
-  },
-
   Paint: {
     header: {
-      icon: paint,
-      title: 'Untitled - Paint',
+      icon: paintSmall,
+      title: "Untitled - Paint",
     },
     component: Paint,
     defaultSize: {
@@ -402,15 +268,4 @@ export const appSettings = {
 };
 
 /* export list */
-export {
-  AboutMe,
-  Poems,
-  Socials,
-  Checker,
-  Minesweeper,
-  ErrorBox,
-  MyComputer,
-  Notepad,
-  Winamp,
-  Paint,
-};
+export { AboutMe, Poems, Socials, Checker, Minesweeper, ErrorBox, Paint };
