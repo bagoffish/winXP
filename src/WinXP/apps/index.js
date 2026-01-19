@@ -1,4 +1,3 @@
-import InternetExplorer from './InternetExplorer';
 import Minesweeper from './Minesweeper';
 import ErrorBox from './ErrorBox';
 import MyComputer from './MyComputer';
@@ -414,5 +413,4 @@ export {
   Notepad,
   Winamp,
   Paint,
-  InternetExplorer,
 };
