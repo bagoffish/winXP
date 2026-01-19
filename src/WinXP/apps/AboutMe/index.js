@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { WindowDropDowns } from "components";
 import dropDownData from "./dropDownData";
 
-// IE icons
+/* icons */
 import ie from "assets/windowsIcons/ie-paper.png";
 import printer from "assets/windowsIcons/17(32x32).png";
 import go from "assets/windowsIcons/290.png";
@@ -53,6 +53,8 @@ function AboutMe({ onClose }) {
     setRoute("lain");
   }
 
+  const backIsDisabled = route === "about";
+
   return (
     <Div>
       <section className="ie__toolbar">
@@ -69,9 +71,9 @@ function AboutMe({ onClose }) {
       <section className="ie__function_bar">
         <div
           className={`ie__function_bar__button${
-            route === "about" ? "--disable" : ""
+            backIsDisabled ? "--disable" : ""
           }`}
-          onClick={route === "about" ? undefined : goAbout}
+          onClick={backIsDisabled ? undefined : goAbout}
         >
           <img className="ie__function_bar__icon" src={back} alt="" />
           <span className="ie__function_bar__text">Back</span>
@@ -95,21 +97,14 @@ function AboutMe({ onClose }) {
           />
         </div>
 
-        <div
-          className="ie__function_bar__button--disable"
-          title="Home"
-        >
+        <div className="ie__function_bar__button--disable" title="Home">
           <img className="ie__function_bar__icon--margin-1" src={home} alt="" />
         </div>
 
         <div className="ie__function_bar__separate" />
 
         <div className="ie__function_bar__button--disable">
-          <img
-            className="ie__function_bar__icon--normalize"
-            src={search}
-            alt=""
-          />
+          <img className="ie__function_bar__icon--normalize" src={search} alt="" />
           <span className="ie__function_bar__text">Search</span>
         </div>
 
@@ -134,11 +129,7 @@ function AboutMe({ onClose }) {
         </div>
 
         <div className="ie__function_bar__button--disable">
-          <img
-            className="ie__function_bar__icon--margin12"
-            src={printer}
-            alt=""
-          />
+          <img className="ie__function_bar__icon--margin12" src={printer} alt="" />
         </div>
 
         <div className="ie__function_bar__button--disable">
@@ -180,23 +171,23 @@ function AboutMe({ onClose }) {
         <div className="ie__content__inner">
           <div className="page">
             {route === "about" ? (
-              <>
-                <pre className="aboutpre">{ABOUT_TEXT}</pre>
-
-                <button
-                  type="button"
-                  className="aboutlink"
-                  onClick={goLain}
+              <pre className="aboutpre">
+                {ABOUT_TEXT_BEFORE}
+                <a
+                  href="#"
+                  className="inline-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    goLain();
+                  }}
                 >
                   Serial Experiments Lain
-                </button>
-              </>
+                </a>
+                {ABOUT_TEXT_AFTER}
+              </pre>
             ) : (
               <div className="lainwrap">
                 <div className="lainbg" />
-                <button type="button" className="lainback" onClick={goAbout}>
-                  ← back
-                </button>
               </div>
             )}
           </div>
@@ -222,7 +213,7 @@ function AboutMe({ onClose }) {
   );
 }
 
-const ABOUT_TEXT = `My name is Coy (or Bag of Fish).
+const ABOUT_TEXT_BEFORE = `My name is Coy (or Bag of Fish).
 
 I won’t list anything majorly personal here; I believe you should learn from me.
 If that deters you in any way, I think you should walk along, 
@@ -265,7 +256,9 @@ Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
         Alien Nine, Evangelion, Parasyte, Nichijou, 
-        Girls Last Tour, Haibane Renmei`;
+        Girls Last Tour, Haibane Renmei, `;
+
+const ABOUT_TEXT_AFTER = ``;
 
 const Div = styled.div`
   height: 100%;
@@ -276,7 +269,7 @@ const Div = styled.div`
   flex-direction: column;
   background: linear-gradient(to right, #edede5 0%, #ede8cd 100%);
 
-  /* ---- IE chrome (copied from your Socials layout) ---- */
+  /* ---- IE chrome (same layout as Socials) ---- */
   .ie__toolbar {
     position: relative;
     display: flex;
@@ -317,7 +310,6 @@ const Div = styled.div`
   .ie__function_bar__button--disable > * {
     pointer-events: none;
   }
-
   .ie__function_bar__button {
     display: flex;
     height: 100%;
@@ -330,7 +322,6 @@ const Div = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.1);
   }
-
   .ie__function_bar__text {
     margin-right: 4px;
   }
@@ -540,7 +531,6 @@ const Div = styled.div`
       10px -2.5px rgba(255, 255, 255, 1), 10px -6px rgba(255, 255, 255, 1);
   }
 
-  /* ---- Content page ---- */
   .page {
     padding: 10px;
     height: 100%;
@@ -558,18 +548,10 @@ const Div = styled.div`
     line-height: 1.35;
   }
 
-  /* clean link aligned with text */
-  .aboutlink {
-    margin-top: 8px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font: inherit;
-    font-size: 12px;
+  .inline-link {
     color: #0000ee;
     text-decoration: underline;
     cursor: pointer;
-    display: inline-block;
   }
 
   .lainwrap {
@@ -578,25 +560,10 @@ const Div = styled.div`
     position: relative;
     background: #fff;
   }
-
   .lainbg {
     width: 100%;
     min-height: 600px;
     background: #fff url("/images/lain.gif") center / contain no-repeat;
-  }
-
-  .lainback {
-    position: absolute;
-    left: 8px;
-    bottom: 8px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    font: inherit;
-    font-size: 12px;
-    color: #0000ee;
-    text-decoration: underline;
-    cursor: pointer;
   }
 `;
 
