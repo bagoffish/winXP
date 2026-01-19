@@ -412,6 +412,8 @@ const Div = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 1px 0 rgba(255, 255, 255, 0.7);
   }
+
+  /* ✅ keep scroll here */
   .ie__content {
     flex: 1;
     overflow: auto;
@@ -420,6 +422,25 @@ const Div = styled.div`
     background-color: #f1f1f1;
     position: relative;
   }
+
+  /* ✅ XP-style scrollbar for the scrolling area */
+  .ie__content::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  .ie__content::-webkit-scrollbar-track {
+    background: #d4d0c8;
+    border-left: 1px solid #808080;
+  }
+  .ie__content::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border: 1px solid #808080;
+    box-shadow: inset 1px 1px 0 #ffffff, inset -1px -1px 0 #a0a0a0;
+  }
+  .ie__content::-webkit-scrollbar-corner {
+    background: #d4d0c8;
+  }
+
   .ie__content__inner {
     position: relative;
     min-height: 800px;
@@ -427,6 +448,7 @@ const Div = styled.div`
     width: 100%;
     height: 100%;
   }
+
   .ie__footer {
     height: 20px;
     border-top: 1px solid transparent;
@@ -492,12 +514,18 @@ const Div = styled.div`
   /* ---- Socials page styles ---- */
   .page {
     padding: 10px;
-    height: 100%;
-    overflow: auto;
+
+    /* ✅ IMPORTANT: let IE content scroll, not the page */
+    height: auto;
+    overflow: visible;
+
     box-sizing: border-box;
     font-family: "Courier New", monospace;
     background: #fff;
     color: #000;
+
+    /* so the window always has something to scroll */
+    min-height: 800px;
   }
 
   .links a {
