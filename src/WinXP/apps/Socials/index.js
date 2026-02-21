@@ -177,13 +177,6 @@ function Socials({ onClose }) {
                 Last.fm
               </a>
               <a
-                href="https://gaori.bandcamp.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                BandCamp
-              </a>
-              <a
                 href="https://soundcloud.com/bagoffish"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -203,13 +196,6 @@ function Socials({ onClose }) {
                 rel="noopener noreferrer"
               >
                 Spotify Artist
-              </a>
-              <a
-                href="https://rateyourmusic.com/artist/coy-2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Rate Your Music
               </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
