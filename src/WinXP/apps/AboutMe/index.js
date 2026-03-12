@@ -221,7 +221,7 @@ function AboutMe({ onClose }) {
   );
 }
 
-const ABOUT_TEXT_BEFORE = `My name is Coy (Or Bag of Fish)
+const ABOUT_TEXT_BEFORE = `My name is Coy (Or Bag of Fish/Reflection in the Koi Pond)
 
 I won't list anything majorly personal here; I believe you should learn from me.
 If that deters you in any way, I think you should walk along, 
