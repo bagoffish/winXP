@@ -156,7 +156,7 @@ function Socials({ onClose }) {
           <div className="page">
             <div className="links">
               <a
-                href="https://steamcommunity.com/id/coyslop/"
+                href="https://steamcommunity.com/id/koiponds/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
