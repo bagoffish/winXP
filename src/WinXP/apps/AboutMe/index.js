@@ -247,14 +247,14 @@ If normal, there's 0 biting.
 INTERESTS —
 Hobbies: Playing guitar, writing, photographing, illustrating & dissecting
 Genres: Philosophy, horror eroge, ero guro, body horror,
-         psychological horror, speculative evolution,
-         post-apocalyptic sci-fi
+        psychological horror, speculative evolution,
+        post-apocalyptic sci-fi
 
 RECOMMENDATIONS —
 TV Shows: Mr. Robot & American Gods
 Visual Novels: Saya no Uta, Steins;Gate, Katawa Shoujo,
-                Teaching Feeling, Higurashi & SubaHibi
-Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei,
+               Teaching Feeling, Higurashi & SubaHibi
+Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei, Ashizuri Suizokukan,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
         Alien Nine, Evangelion, Parasyte, Nichijou, 
