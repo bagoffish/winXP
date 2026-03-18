@@ -191,7 +191,7 @@ function Socials({ onClose }) {
                 My Time Zone
               </a>
               <a
-                href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq
+                href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
                 target="_blank"
                 rel="noopener noreferrer"
               >
