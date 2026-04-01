@@ -198,7 +198,7 @@ function Socials({ onClose }) {
                 Main Music Project
               </a>
               <a
-                href="https://open.spotify.com/artist/"
+                href="https://open.spotify.com/artist/1Z9V6uAURuYpLepGnqsSh7"
                 target="_blank"
                 rel="noopener noreferrer"
               >
