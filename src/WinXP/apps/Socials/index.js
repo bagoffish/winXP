@@ -195,7 +195,14 @@ function Socials({ onClose }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Spotify Artist
+                Main Music Project
+              </a>
+              <a
+                href="https://open.spotify.com/artist/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Side Music Project
               </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
