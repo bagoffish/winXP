@@ -257,7 +257,7 @@ Visual Novels: Saya no Uta, Steins;Gate, Katawa Shoujo,
 Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei, Ashizuri Suizokukan,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
-        Alien Nine, Evangelion, Parasyte, Nichijou, 
+        Alien Nine, Evangelion, Parasyte, Nichijou, Gachiakuta,
         Girls Last Tour, Haibane Renmei & `;
 
 const ABOUT_TEXT_AFTER = ``;
