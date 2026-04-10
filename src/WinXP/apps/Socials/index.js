@@ -177,18 +177,18 @@ function Socials({ onClose }) {
                 Last.fm
               </a>
               <a
+                href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Music Project
+              </a>
+              <a
                 href="https://time.is/KST"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 My Time Zone
-              </a>
-              <a
-                href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Main Music Project
               </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
