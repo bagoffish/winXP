@@ -190,7 +190,6 @@ function Socials({ onClose }) {
               >
                 Main Music Project
               </a>
-              </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
           </div>
