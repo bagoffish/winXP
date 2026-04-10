@@ -177,13 +177,6 @@ function Socials({ onClose }) {
                 Last.fm
               </a>
               <a
-                href="https://soundcloud.com/bagoffish"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SoundCloud
-              </a>
-              <a
                 href="https://time.is/KST"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -197,12 +190,6 @@ function Socials({ onClose }) {
               >
                 Main Music Project
               </a>
-              <a
-                href="https://open.spotify.com/artist/1Z9V6uAURuYpLepGnqsSh7"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Side Music Project
               </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
