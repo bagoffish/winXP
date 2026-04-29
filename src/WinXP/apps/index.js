@@ -89,16 +89,16 @@ export const defaultIconState = [
   },
   {
     id: 1,
-    icon: poemsIcon,
-    title: "Poems",
-    component: Poems,
+    icon: socialsIcon,
+    title: "Socials",
+    component: Socials,
     isFocus: false,
   },
   {
     id: 2,
-    icon: socialsIcon,
-    title: "Socials",
-    component: Socials,
+    icon: poemsIcon,
+    title: "Poems",
+    component: Poems,
     isFocus: false,
   },
   {
@@ -120,6 +120,13 @@ export const defaultIconState = [
     icon: paintLarge,
     title: "Paint",
     component: Paint,
+    isFocus: false,
+  },
+  {
+    id: 6,
+    icon: winamp,
+    title: "Winamp",
+    component: Winamp,
     isFocus: false,
   },
 ];
