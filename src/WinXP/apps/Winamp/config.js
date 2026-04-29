@@ -5,7 +5,7 @@ const album = 'One Hell of a Paradise';
 export const initialTracks = [
   {
     url:
-      '/src/WinXP/Music/1.mp3',
+      '/WinXP/music/1.mp3',
     duration: 303.600,
     metaData: {
       title: 'Daijokay',
@@ -15,7 +15,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/2.mp3',
+      '/WinXP/music/2.mp3',
     duration: 115.963,
     metaData: {
       title: "Haole Don't Surf",
@@ -25,7 +25,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/3.mp3',
+      '/WinXP/music/3.mp3',
     duration: 127.279,
     metaData: {
       title: 'The Fool and Friends',
@@ -35,7 +35,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/4.mp3',
+      '/WinXP/music/4.mp3',
     duration: 165.489,
     metaData: {
       title: 'Gills',
@@ -45,7 +45,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/5.mp3',
+      '/WinXP/music/5.mp3',
     duration: 239.687,
     metaData: {
       title: 'Hawaiian Helios/Sunslayer',
@@ -55,7 +55,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/6.mp3',
+      '/WinXP/music/6.mp3',
     duration: 209.304,
     metaData: {
       title: 'October Usagi',
@@ -65,7 +65,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/7.mp3',
+      '/WinXP/music/7.mp3',
     duration: 264.987,
     metaData: {
       title: 'Knife Fight Battle Theme',
@@ -75,7 +75,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/8.mp3',
+      '/WinXP/music/8.mp3',
     duration: 227.473,
     metaData: {
       title: 'Valkyrie Hunting',
@@ -85,7 +85,7 @@ export const initialTracks = [
   },
   {
     url:
-      '/src/WinXP/Music/9.mp3',
+      '/WinXP/music/9.mp3',
     duration: 328.344,
     metaData: {
       title: 'One Hell of a Paradise',
