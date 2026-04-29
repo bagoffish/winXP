@@ -10,7 +10,7 @@ import Winamp from "./Winamp";
 /* ===== icons ===== */
 import iePaper from "assets/windowsIcons/ie-paper.png";
 import mine from "assets/minesweeper/mine-icon.png";
-import error from "assets/windowsIcons/winamp.png";
+import winamp from "assets/windowsIcons/winamp.png";
 import error from "assets/windowsIcons/897(16x16).png";
 import paintLarge from "assets/windowsIcons/680(32x32).png";
 import paintSmall from "assets/windowsIcons/680(16x16).png";
