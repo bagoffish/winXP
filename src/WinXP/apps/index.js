@@ -266,11 +266,13 @@ export const appSettings = {
     minimized: false,
     maximized: window.innerWidth < 800,
     multiInstance: true,
-    },
-    Winamp: {
+  },
+
+  /* ✅ FIXED WINAMP */
+  Winamp: {
     header: {
-      icon: winampIcon,
-      title: 'Winamp',
+      icon: winamp, // ← FIX HERE
+      title: "Winamp",
       invisible: true,
     },
     component: Winamp,
@@ -290,4 +292,13 @@ export const appSettings = {
 };
 
 /* export list */
-export { AboutMe, Socials,Poems, Checker, Minesweeper, ErrorBox, Paint, Winamp };
+export {
+  AboutMe,
+  Socials,
+  Poems,
+  Checker,
+  Minesweeper,
+  ErrorBox,
+  Paint,
+  Winamp,
+};
