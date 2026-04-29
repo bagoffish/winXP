@@ -253,8 +253,8 @@ export const appSettings = {
 ========================= */
 export {
   AboutMe,
-  Poems,
   Socials,
+  Poems,
   Checker,
   Minesweeper,
   Paint,
