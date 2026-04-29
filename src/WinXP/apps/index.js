@@ -12,7 +12,7 @@ import socialsIcon from 'assets/windowsIcons/links.png';
 import checkerIcon from 'assets/windowsIcons/checker.png';
 import mineIcon from 'assets/windowsIcons/pinball.png';
 import paintIcon from 'assets/windowsIcons/edit.png';
-import winampIcon from 'assets/windowsIcons/msn.png'; // placeholder icon
+import winampIcon from 'assets/windowsIcons/winamp.png'; // placeholder icon
 
 const gen = () => {
   let id = -1;
