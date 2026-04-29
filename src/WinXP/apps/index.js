@@ -1,21 +1,18 @@
-import InternetExplorer from './InternetExplorer';
 import Minesweeper from './Minesweeper';
-import ErrorBox from './ErrorBox';
-import MyComputer from './MyComputer';
-import Notepad from './Notepad';
-import Winamp from './Winamp';
 import Paint from './Paint';
-import iePaper from 'assets/windowsIcons/ie-paper.png';
-import ie from 'assets/windowsIcons/ie.png';
-import mine from 'assets/minesweeper/mine-icon.png';
-import error from 'assets/windowsIcons/897(16x16).png';
-import computer from 'assets/windowsIcons/676(16x16).png';
-import computerLarge from 'assets/windowsIcons/676(32x32).png';
-import notepad from 'assets/windowsIcons/327(16x16).png';
-import notepadLarge from 'assets/windowsIcons/327(32x32).png';
-import winamp from 'assets/windowsIcons/winamp.png';
-import paintLarge from 'assets/windowsIcons/680(32x32).png';
-import paint from 'assets/windowsIcons/680(16x16).png';
+import AboutMe from './AboutMe';
+import Poems from './Poems';
+import Socials from './Socials';
+import Checker from './Checker';
+import Winamp from './Winamp';
+
+import aboutMeIcon from 'assets/windowsIcons/about-me.png';
+import poemsIcon from 'assets/windowsIcons/poems.png';
+import socialsIcon from 'assets/windowsIcons/links.png';
+import checkerIcon from 'assets/windowsIcons/checker.png';
+import mineIcon from 'assets/windowsIcons/pinball.png';
+import paintIcon from 'assets/windowsIcons/edit.png';
+import winampIcon from 'assets/windowsIcons/msn.png'; // placeholder icon
 
 const gen = () => {
   let id = -1;
@@ -24,54 +21,20 @@ const gen = () => {
     return id;
   };
 };
+
 const genId = gen();
 const genIndex = gen();
+
+/* =========================
+   DEFAULT OPEN APPS
+   (Winamp hidden like original)
+========================= */
 export const defaultAppState = [
-  {
-    component: InternetExplorer,
-    header: {
-      title: 'Internet Explorer',
-      icon: iePaper,
-    },
-    defaultSize: {
-      width: 700,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 130,
-      y: 20,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    id: genId(),
-    zIndex: genIndex(),
-  },
-  {
-    component: Minesweeper,
-    header: {
-      title: 'Minesweeper',
-      icon: mine,
-    },
-    defaultSize: {
-      width: 0,
-      height: 0,
-    },
-    defaultOffset: {
-      x: 180,
-      y: 170,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: false,
-    id: genId(),
-    zIndex: genIndex(),
-  },
   {
     component: Winamp,
     header: {
       title: 'Winamp',
-      icon: winamp,
+      icon: winampIcon,
       invisible: true,
     },
     defaultSize: {
@@ -88,96 +51,143 @@ export const defaultAppState = [
     id: genId(),
     zIndex: genIndex(),
   },
-  {
-    component: MyComputer,
-    header: {
-      title: 'My Computer',
-      icon: computer,
-    },
-    defaultSize: {
-      width: 660,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 250,
-      y: 40,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    id: genId(),
-    zIndex: genIndex(),
-  },
 ];
 
+/* =========================
+   DESKTOP ICONS
+========================= */
 export const defaultIconState = [
   {
     id: 0,
-    icon: ie,
-    title: 'Internet Explorer',
-    component: InternetExplorer,
+    icon: aboutMeIcon,
+    title: 'About Me',
+    component: AboutMe,
     isFocus: false,
   },
   {
     id: 1,
-    icon: mine,
+    icon: poemsIcon,
+    title: 'Poems',
+    component: Poems,
+    isFocus: false,
+  },
+  {
+    id: 2,
+    icon: socialsIcon,
+    title: 'Socials',
+    component: Socials,
+    isFocus: false,
+  },
+  {
+    id: 3,
+    icon: checkerIcon,
+    title: 'Checker',
+    component: Checker,
+    isFocus: false,
+  },
+  {
+    id: 4,
+    icon: mineIcon,
     title: 'Minesweeper',
     component: Minesweeper,
     isFocus: false,
   },
   {
-    id: 2,
-    icon: computerLarge,
-    title: 'My Computer',
-    component: MyComputer,
-    isFocus: false,
-  },
-  {
-    id: 3,
-    icon: notepadLarge,
-    title: 'Notepad',
-    component: Notepad,
-    isFocus: false,
-  },
-  {
-    id: 4,
-    icon: winamp,
-    title: 'Winamp',
-    component: Winamp,
-    isFocus: false,
-  },
-  {
     id: 5,
-    icon: paintLarge,
+    icon: paintIcon,
     title: 'Paint',
     component: Paint,
     isFocus: false,
   },
 ];
 
+/* =========================
+   APP SETTINGS
+========================= */
 export const appSettings = {
-  'Internet Explorer': {
+  'About Me': {
     header: {
-      icon: iePaper,
-      title: 'InternetExplorer',
+      icon: aboutMeIcon,
+      title: 'About Me',
     },
-    component: InternetExplorer,
+    component: AboutMe,
     defaultSize: {
-      width: 700,
-      height: 500,
+      width: 500,
+      height: 400,
     },
     defaultOffset: {
-      x: 140,
-      y: 30,
+      x: 100,
+      y: 50,
     },
     resizable: true,
     minimized: false,
-    maximized: window.innerWidth < 800,
+    maximized: false,
+    multiInstance: false,
+  },
+
+  Poems: {
+    header: {
+      icon: poemsIcon,
+      title: 'Poems',
+    },
+    component: Poems,
+    defaultSize: {
+      width: 600,
+      height: 500,
+    },
+    defaultOffset: {
+      x: 120,
+      y: 70,
+    },
+    resizable: true,
+    minimized: false,
+    maximized: false,
     multiInstance: true,
   },
+
+  Socials: {
+    header: {
+      icon: socialsIcon,
+      title: 'Socials',
+    },
+    component: Socials,
+    defaultSize: {
+      width: 400,
+      height: 300,
+    },
+    defaultOffset: {
+      x: 140,
+      y: 90,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
+  },
+
+  Checker: {
+    header: {
+      icon: checkerIcon,
+      title: 'Checker',
+    },
+    component: Checker,
+    defaultSize: {
+      width: 400,
+      height: 300,
+    },
+    defaultOffset: {
+      x: 160,
+      y: 110,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: true,
+  },
+
   Minesweeper: {
     header: {
-      icon: mine,
+      icon: mineIcon,
       title: 'Minesweeper',
     },
     component: Minesweeper,
@@ -186,96 +196,18 @@ export const appSettings = {
       height: 0,
     },
     defaultOffset: {
-      x: 190,
-      y: 180,
+      x: 180,
+      y: 130,
     },
     resizable: false,
     minimized: false,
     maximized: false,
     multiInstance: true,
   },
-  Error: {
-    header: {
-      icon: error,
-      title: 'C:\\',
-      buttons: ['close'],
-      noFooterWindow: true,
-    },
-    component: ErrorBox,
-    defaultSize: {
-      width: 380,
-      height: 0,
-    },
-    defaultOffset: {
-      x: window.innerWidth / 2 - 190,
-      y: window.innerHeight / 2 - 60,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: false,
-    multiInstance: true,
-  },
-  'My Computer': {
-    header: {
-      icon: computer,
-      title: 'My Computer',
-    },
-    component: MyComputer,
-    defaultSize: {
-      width: 660,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 260,
-      y: 50,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    multiInstance: false,
-  },
-  Notepad: {
-    header: {
-      icon: notepad,
-      title: 'Untitled - Notepad',
-    },
-    component: Notepad,
-    defaultSize: {
-      width: 660,
-      height: 500,
-    },
-    defaultOffset: {
-      x: 270,
-      y: 60,
-    },
-    resizable: true,
-    minimized: false,
-    maximized: window.innerWidth < 800,
-    multiInstance: true,
-  },
-  Winamp: {
-    header: {
-      icon: winamp,
-      title: 'Winamp',
-      invisible: true,
-    },
-    component: Winamp,
-    defaultSize: {
-      width: 0,
-      height: 0,
-    },
-    defaultOffset: {
-      x: 0,
-      y: 0,
-    },
-    resizable: false,
-    minimized: false,
-    maximized: false,
-    multiInstance: false,
-  },
+
   Paint: {
     header: {
-      icon: paint,
+      icon: paintIcon,
       title: 'Untitled - Paint',
     },
     component: Paint,
@@ -284,14 +216,47 @@ export const appSettings = {
       height: 500,
     },
     defaultOffset: {
-      x: 280,
-      y: 70,
+      x: 200,
+      y: 150,
     },
     resizable: true,
     minimized: false,
-    maximized: window.innerWidth < 800,
+    maximized: false,
     multiInstance: true,
+  },
+
+  /* ===== WINAMP (restored exactly like original) ===== */
+  Winamp: {
+    header: {
+      icon: winampIcon,
+      title: 'Winamp',
+      invisible: true,
+    },
+    component: Winamp,
+    defaultSize: {
+      width: 0,
+      height: 0,
+    },
+    defaultOffset: {
+      x: 0,
+      y: 0,
+    },
+    resizable: false,
+    minimized: false,
+    maximized: false,
+    multiInstance: false,
   },
 };
 
-export { InternetExplorer, Minesweeper, ErrorBox, MyComputer, Notepad, Winamp };
+/* =========================
+   EXPORTS
+========================= */
+export {
+  AboutMe,
+  Poems,
+  Socials,
+  Checker,
+  Minesweeper,
+  Paint,
+  Winamp,
+};
