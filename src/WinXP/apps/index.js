@@ -5,7 +5,7 @@ import Minesweeper from "./Minesweeper";
 import Paint from "./Paint";
 import Poems from "./Poems";
 import Socials from "./Socials";
-import Socials from "./Winamp";
+import Winamp from "./Winamp";
 
 /* ===== icons ===== */
 import iePaper from "assets/windowsIcons/ie-paper.png";
