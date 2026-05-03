@@ -174,14 +174,14 @@ function Socials({ onClose }) {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Toyhouse
+                Last.fm
               </a>
               <a
                 href="https://toyhou.se/bagoffish"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Last.fm
+                Toyhouse
               </a>
               <a
                 href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
