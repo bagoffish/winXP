@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: Georgia, serif;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+#background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease;
+}
+
+#textbox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 180px;
+  background: rgba(0,0,0,0.78);
+  color: white;
+  padding: 30px;
+  box-sizing: border-box;
+  font-size: 26px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+#namebox {
+  position: absolute;
+  bottom: 190px;
+  left: 20px;
+  background: rgba(20,20,20,0.9);
+  color: white;
+  padding: 10px 20px;
+  font-size: 22px;
+  border-left: 4px solid white;
+}
+
+#continue {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
