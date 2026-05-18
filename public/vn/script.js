@@ -430,9 +430,30 @@ const letterText = document.getElementById('letter-text');
 const titleScreen = document.getElementById('title-screen');
 const gameScreen = document.getElementById('game-screen');
 const creditsScreen = document.getElementById('credits-screen');
-const bgMusic = document.getElementById('bgMusic');
 
-bgMusic.loop = true;
+const gameMusic = document.getElementById('bgMusic');     // Game BGM
+const titleMusic = document.getElementById('titleMusic'); // Title + Credits BGM
+
+gameMusic.loop = true;
+titleMusic.loop = true;
+
+function playTitleMusic() {
+    gameMusic.pause();
+    titleMusic.src = "/vn/audios/title.ogg";
+    titleMusic.play().catch(() => {});
+}
+
+function playGameMusic() {
+    titleMusic.pause();
+    gameMusic.src = "/vn/audios/wind.ogg";
+    gameMusic.play().catch(() => {});
+}
+
+function playCreditsMusic() {
+    gameMusic.pause();
+    titleMusic.src = "/vn/audios/title.ogg";   // Same as title
+    titleMusic.play().catch(() => {});
+}
 
 function typeText(text, isLetter = false) {
     clearInterval(interval);
@@ -484,26 +505,19 @@ function showLine() {
 }
 
 function endGame() {
-    // Fade out game screen
     gameScreen.style.transition = 'opacity 1.8s ease';
     gameScreen.style.opacity = '0';
 
     setTimeout(() => {
         gameScreen.style.display = 'none';
-        
-        // Show credits with fade in
         creditsScreen.style.display = 'flex';
-        // Trigger fade in
-        setTimeout(() => {
-            creditsScreen.style.opacity = '1';
-        }, 50);
-        
-        bgMusic.pause();
+        setTimeout(() => { creditsScreen.style.opacity = '1'; }, 50);
+        playCreditsMusic();
     }, 1800);
 }
 
 function returnToTitle() {
-    window.location.reload();   // Simple page refresh
+    window.location.reload();   // Refresh as you requested
 }
 
 function startGame() {
@@ -511,8 +525,7 @@ function startGame() {
     setTimeout(() => {
         titleScreen.style.display = 'none';
         gameScreen.style.display = 'block';
-        bgMusic.src = "/vn/audios/wind.ogg";
-        bgMusic.play().catch(() => {});
+        playGameMusic();
         showLine();
     }, 1200);
 }
