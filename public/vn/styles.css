@@ -98,17 +98,19 @@ body {
     filter: drop-shadow(0 25px 35px rgba(0,0,0,0.5));
 }
 
-/* TEXTBOX */
+/* TEXTBOX - smaller + 50% transparent */
 #textbox {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: rgba(248, 241, 227, 0.97);
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    background: rgba(248, 241, 227, 0.50);   /* 50% transparent */
     border-top: 6px solid #3c2f1e;
-    padding: 45px 85px 65px;
+    padding: 35px 80px 50px;                 /* smaller padding */
     z-index: 10;
     cursor: pointer;
-    box-shadow: 0 -30px 70px rgba(0,0,0,0.25);
-    min-height: 290px;
+    box-shadow: 0 -20px 60px rgba(0,0,0,0.25);
+    min-height: 240px;                       /* smaller height */
     color: #1a1a1a;
 }
 
