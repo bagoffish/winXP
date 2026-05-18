@@ -97,24 +97,24 @@ body {
     pointer-events: none;
 }
 
-/* CHARACTER SPRITE - BIGGER & BETTER FIT */
+/* CHARACTER SPRITE - Bigger + Feet touching bottom */
 #character {
     position: absolute;
-    bottom: 12%;           /* Moved up a bit */
+    bottom: 0;                    /* Feet fully at the bottom */
     left: 50%;
     transform: translateX(-50%);
-    max-height: 78%;       /* Much bigger */
-    max-width: 45%;
+    max-height: 82%;              /* Made bigger */
+    max-width: 48%;
     z-index: 5;
-    opacity: 0.92;
+    opacity: 0.94;
     transition: opacity 0.6s ease;
-    filter: drop-shadow(0 25px 35px rgba(0,0,0,0.6));
-    image-rendering: crisp-edges;   /* Keeps it sharp */
+    filter: drop-shadow(0 25px 40px rgba(0,0,0,0.65));
+    image-rendering: crisp-edges;
 }
 
-/* Make sure it doesn't get cut off */
-#game-screen {
-    overflow: hidden;
+/* Optional: Slight lift if feet are cut off on some screens */
+#character {
+    padding-bottom: 2vh;          /* Tiny breathing room if needed */
 }
 
 /* TEXTBOX - smaller + 50% transparent */
