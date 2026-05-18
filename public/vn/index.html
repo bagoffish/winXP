@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WINTER LETTER</title>
+    <title>winter letter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- TITLE SCREEN -->
+    <!-- TITLE SCREEN - exact "Your Wings My Wings" style -->
     <div id="title-screen">
-        <div id="title">WINTER LETTER</div>
-        <ul class="menu">
-            <li onclick="startGame()">START</li>
-            <li onclick="alert('A quiet winter story by coy')">ABOUT</li>
-            <li onclick="alert('Click or press Space / Enter to advance')">HELP</li>
-            <li onclick="window.location.href='/'">QUIT</li>
+        <div class="top-menu">
+            <a onclick="startGame()">start</a>
+            <a onclick="alert('A quiet winter story by coy')">about</a>
+            <a onclick="alert('Click or press Space / Enter to advance')">help</a>
+            <a onclick="window.location.href='/'">quit</a>
+        </div>
+
+        <div id="title-art">
+            <!-- Your central art goes here later -->
+        </div>
+
+        <div class="footer">winter_letter</div>
     </div>
 
     <!-- GAME SCREEN -->
@@ -33,8 +39,10 @@
         </div>
 
         <!-- Special Letter display -->
-        <div id="letter-box" style="display: none; position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 620px; background: #f8f1e3; padding: 60px 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 12px solid #d4b89c; z-index: 20;">
-            <div id="letter-text" style="font-size: 26px; line-height: 1.75; color: #3c2f1e; font-family: 'EB Garamond', serif; white-space: pre-wrap;"></div>
+        <div id="letter-box" style="display: none;">
+            <div id="letter-paper">
+                <div id="letter-text"></div>
+            </div>
         </div>
     </div>
 
