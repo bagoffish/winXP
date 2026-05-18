@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>winter letter</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/vn/styles.css">
 </head>
 <body>
 
@@ -12,13 +12,14 @@
     <div id="title-screen">
         <div class="top-menu">
             <a onclick="startGame()">start</a>
-            <a onclick="alert('A quiet winter story by coy')">about</a>
-            <a onclick="alert('Click or press Space / Enter to advance')">help</a>
+            <a onclick="alert('a quiet winter story by coy')">about</a>
+            <a onclick="alert('click or press Space / enter to advance')">help</a>
             <a onclick="window.location.href='/'">quit</a>
         </div>
 
+        <!-- TITLE IMAGE (replaces the old text) -->
         <div id="title-art">
-            <!-- Your central art goes here later -->
+            <img src="/vn/images/title.png" alt="WINTER LETTER" style="max-width: 720px; width: 100%; display: block; margin: 0 auto;">
         </div>
 
         <div class="footer">winter_letter</div>
@@ -48,6 +49,6 @@
     <audio id="bgMusic" loop></audio>
     <audio id="sfx"></audio>
 
-    <script src="script.js"></script>
+    <script src="/vn/script.js"></script>
 </body>
 </html>
