@@ -166,8 +166,8 @@ const story = [
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "His coat kept catching on frozen roots beneath the snow." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "His head struck stones as we moved.", sfx: "hit" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "A dull sound." },
-    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Again." },
-    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "And again." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Again.", sfx: "hit" },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "And again.", sfx: "hit" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "That sound still wakes me." },
 
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "The cedar stood deeper in the trees." },
