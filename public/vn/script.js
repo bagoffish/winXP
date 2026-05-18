@@ -1,6 +1,6 @@
 // ====================== STORY DATA ======================
 const story = [
-    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I killed a man in winter." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "I killed a man in winter." },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral-3.png", name: "Me", text: "Though I cannot say with certainty which winter it was." },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "That is the first difficulty." },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Not that I killed him." },
