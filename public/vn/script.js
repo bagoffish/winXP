@@ -418,16 +418,23 @@ const sfxPlayer = document.getElementById('sfx');
 gameMusic.loop = true;
 titleMusic.loop = true;
 
+// Preload all backgrounds to prevent white flash
+function preloadBackgrounds() {
+    const uniqueBgs = [...new Set(story.map(line => line.bg).filter(Boolean))];
+    uniqueBgs.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
 // SFX - stops immediately when finished
 function playSFX(name) {
     if (!name || !sfxPlayer) return;
     
     sfxPlayer.src = `/vn/audios/${name}.ogg`;
     sfxPlayer.currentTime = 0;
-    
     sfxPlayer.play().catch(() => {});
     
-    // Stop audio right after it finishes playing
     sfxPlayer.onended = function() {
         sfxPlayer.pause();
         sfxPlayer.currentTime = 0;
@@ -478,7 +485,10 @@ function showLine() {
     }
     const line = story[currentIndex];
 
-    if (line.bg) bgEl.style.backgroundImage = `url('${line.bg}')`;
+    // Smooth background change (no white flash)
+    if (line.bg) {
+        bgEl.style.backgroundImage = `url('${line.bg}')`;
+    }
 
     if (line.char && charEl) {
         charEl.src = line.char;
@@ -529,8 +539,11 @@ function startGame() {
     }, 1200);
 }
 
-// Title music handling
-window.addEventListener('load', () => playTitleMusic());
+// Initialize
+window.addEventListener('load', () => {
+    playTitleMusic();
+    preloadBackgrounds();   // Preload all images
+});
 
 document.addEventListener('click', () => {
     if (titleMusic.paused && titleScreen.style.display !== 'none') {
