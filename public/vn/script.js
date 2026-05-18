@@ -431,18 +431,27 @@ const titleScreen = document.getElementById('title-screen');
 const gameScreen = document.getElementById('game-screen');
 const creditsScreen = document.getElementById('credits-screen');
 const bgMusic = document.getElementById('bgMusic');
-const sfxPlayer = document.getElementById('sfx');
 
 bgMusic.loop = true;
 
-function playSFX(name) {
-    if (!name) return;
-    sfxPlayer.src = `/vn/audios/${name}.ogg`;
-    sfxPlayer.currentTime = 0;
-    sfxPlayer.play().catch(() => {});
+function typeText(text, isLetter = false) {
+    clearInterval(interval);
+    if (isLetter) letterText.textContent = '';
+    else textEl.textContent = '';
+    fullText = text;
+    charIndex = 0;
+    typing = true;
+    interval = setInterval(() => {
+        if (charIndex < fullText.length) {
+            if (isLetter) letterText.textContent += fullText.charAt(charIndex);
+            else textEl.textContent += fullText.charAt(charIndex);
+            charIndex++;
+        } else {
+            clearInterval(interval);
+            typing = false;
+        }
+    }, 32);
 }
-
-function typeText(text, isLetter = false) { ... } // keep your existing typeText
 
 function showLine() {
     if (currentIndex >= story.length) {
@@ -468,34 +477,24 @@ function showLine() {
         textboxEl.style.display = 'block';
         letterBox.style.display = 'none';
         nameEl.textContent = line.name || '';
-        if (!line.name) {
-            textboxEl.classList.add('narration');
-        } else {
-            textboxEl.classList.remove('narration');
-        }
+        if (!line.name) textboxEl.classList.add('narration');
+        else textboxEl.classList.remove('narration');
         typeText(line.text, false);
     }
-
-    playSFX(line.sfx);
 }
 
 function endGame() {
-    // Fade to black
-    const overlay = document.getElementById('overlay');
-    overlay.style.transition = 'background 2s';
-    overlay.style.background = 'rgba(0,0,0,1)';
-
+    gameScreen.style.opacity = '0';
     setTimeout(() => {
         gameScreen.style.display = 'none';
         creditsScreen.style.display = 'flex';
         bgMusic.pause();
-    }, 2000);
+    }, 1500);
 }
 
 function returnToTitle() {
     creditsScreen.style.display = 'none';
     titleScreen.style.display = 'flex';
-    titleScreen.style.opacity = '1';
     currentIndex = 0;
 }
 
@@ -507,23 +506,39 @@ function startGame() {
         bgMusic.src = "/vn/audios/wind.ogg";
         bgMusic.play().catch(() => {});
         showLine();
-    }, 1500);
+    }, 1200);
 }
 
-// Keep your existing click and keydown listeners...
-textboxEl.addEventListener('click', () => { ... });
-letterBox.addEventListener('click', () => { ... });
+// Click handlers
+textboxEl.addEventListener('click', () => {
+    if (typing) {
+        clearInterval(interval);
+        textEl.textContent = fullText;
+        typing = false;
+    } else {
+        currentIndex++;
+        showLine();
+    }
+});
+
+letterBox.addEventListener('click', () => {
+    if (typing) {
+        clearInterval(interval);
+        letterText.textContent = fullText;
+        typing = false;
+    } else {
+        currentIndex++;
+        showLine();
+    }
+});
 
 document.addEventListener('keydown', e => {
     if (e.key === ' ' || e.key === 'Enter') {
         e.preventDefault();
         if (typing) {
             clearInterval(interval);
-            if (letterBox.style.display === 'block') {
-                letterText.textContent = fullText;
-            } else {
-                textEl.textContent = fullText;
-            }
+            if (letterBox.style.display === 'block') letterText.textContent = fullText;
+            else textEl.textContent = fullText;
             typing = false;
         } else {
             currentIndex++;
