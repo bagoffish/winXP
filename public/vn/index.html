@@ -16,13 +16,15 @@
             <li onclick="alert('A quiet winter story by coy')">ABOUT</li>
             <li onclick="alert('Click or press Space / Enter to advance')">HELP</li>
             <li onclick="window.location.href='/'">QUIT</li>
-        </ul>
     </div>
 
     <!-- GAME SCREEN -->
     <div id="game-screen">
         <div id="background"></div>
         <div id="overlay"></div>
+        
+        <!-- Character sprite -->
+        <img id="character" src="" alt="" style="position: absolute; bottom: 18%; left: 50%; transform: translateX(-50%); max-height: 68%; z-index: 5; opacity: 0; transition: opacity 0.8s ease;">
 
         <div id="textbox">
             <div id="namebox"></div>
@@ -30,7 +32,7 @@
         </div>
     </div>
 
-    <!-- AUDIO ELEMENTS -->
+    <!-- AUDIO -->
     <audio id="bgMusic" loop></audio>
     <audio id="sfx"></audio>
 
