@@ -12,7 +12,7 @@
     <div id="title-screen">
         <div class="top-menu">
             <a onclick="startGame()">start</a>
-            <a onclick="alert('a quiet winter story by coy')">about</a>
+            <a onclick="alert('short story by coy')">about</a>
             <a onclick="alert('click or press space / enter to advance')">help</a>
             <a onclick="window.location.href='/'">quit</a>
         </div>
@@ -43,10 +43,21 @@
         </div>
     </div>
 
+    <!-- CREDITS SCREEN -->
+    <div id="credits-screen" style="display: none; position: fixed; inset: 0; background: #000; color: #e8e4d9; flex-direction: column; align-items: center; justify-content: center; z-index: 200; text-align: center;">
+        <h1 style="font-size: 3.2rem; letter-spacing: 12px; margin-bottom: 80px; color: #c8d7ff;">WINTER LETTER</h1>
+        <p style="font-size: 1.6rem; line-height: 2.4; max-width: 600px;">
+            Art by <a href="https://x.com/wafflepie1111" target="_blank" style="color:#c8d7ff; text-decoration: underline;">@wafflepie1111</a><br>
+            Story by <a href="https://x.com/coy2kki" target="_blank" style="color:#c8d7ff; text-decoration: underline;">@coy2kki</a>
+        </p>
+        <button onclick="returnToTitle()" style="margin-top: 80px; padding: 16px 48px; font-size: 1.4rem; background: transparent; border: 2px solid #c8d7ff; color: #c8d7ff; cursor: pointer; letter-spacing: 4px; transition: all 0.3s;">
+            RETURN TO TITLE
+        </button>
+    </div>
+
     <audio id="bgMusic" loop></audio>
     <audio id="sfx"></audio>
 
-    <!-- Make sure this path is correct -->
     <script src="/vn/script.js"></script>
 </body>
 </html>
