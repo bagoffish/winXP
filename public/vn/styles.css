@@ -73,12 +73,11 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center;
-    background-color: #1a1a1a;     /* Dark fallback - prevents white flash */
-    transition: background-image 0.4s ease-in-out;   /* Smooth crossfade */
+    background-color: #1a1a1a;
+    transition: background-image 0.4s ease-in-out;
     z-index: 1;
 }
 
-/* Extra layer to help with preloading smoothness */
 #background::after {
     content: '';
     position: absolute;
@@ -97,39 +96,36 @@ body {
     pointer-events: none;
 }
 
-/* CHARACTER SPRITE - Bigger + Feet touching bottom */
+/* ==================== CHARACTER SPRITE ==================== */
 #character {
     position: absolute;
-    bottom: 0;                    /* Feet fully at the bottom */
+    bottom: 0;                    /* Fully grounded - no floating */
     left: 50%;
     transform: translateX(-50%);
-    max-height: 82%;              /* Made bigger */
-    max-width: 48%;
+    max-height: 90vh;             /* ~90% height as requested */
+    max-width: 55%;               /* Balanced width for larger size */
     z-index: 5;
-    opacity: 0.94;
+    opacity: 0.95;
     transition: opacity 0.6s ease;
-    filter: drop-shadow(0 25px 40px rgba(0,0,0,0.65));
+    filter: drop-shadow(0 30px 50px rgba(0,0,0,0.7));
     image-rendering: crisp-edges;
+    /* Remove any padding that could cause floating */
+    padding-bottom: 0;
 }
 
-/* Optional: Slight lift if feet are cut off on some screens */
-#character {
-    padding-bottom: 2vh;          /* Tiny breathing room if needed */
-}
-
-/* TEXTBOX - smaller + 50% transparent */
+/* TEXTBOX */
 #textbox {
     position: absolute;
     bottom: 0; 
     left: 0; 
     right: 0;
-    background: rgba(248, 241, 227, 0.50);   /* 50% transparent */
+    background: rgba(248, 241, 227, 0.50);
     border-top: 6px solid #3c2f1e;
-    padding: 35px 80px 50px;                 /* smaller padding */
+    padding: 35px 80px 45px;      /* Slightly reduced bottom padding */
     z-index: 10;
     cursor: pointer;
     box-shadow: 0 -20px 60px rgba(0,0,0,0.25);
-    min-height: 240px;                       /* smaller height */
+    min-height: 230px;
     color: #1a1a1a;
 }
 
