@@ -5,13 +5,13 @@
 body {
     height: 100vh;
     overflow: hidden;
-    background: #f8f1e3; /* warm white / paper color */
+    background: #f8f1e3;
     font-family: 'EB Garamond', serif;
-    color: #1a1a1a; /* black text */
+    color: #1a1a1a;
     user-select: none;
 }
 
-/* TITLE SCREEN - light version */
+/* TITLE SCREEN */
 #title-screen {
     position: fixed;
     inset: 0;
@@ -84,17 +84,34 @@ body {
     pointer-events: none;
 }
 
+/* CHARACTER SPRITE - smaller + semi-transparent */
+#character {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 48%;           /* Smaller */
+    max-width: 36%;
+    z-index: 5;
+    opacity: 0.85;             /* Semi-transparent */
+    transition: opacity 0.8s ease;
+    filter: drop-shadow(0 25px 35px rgba(0,0,0,0.5));
+}
+
+/* TEXTBOX */
 #textbox {
     position: absolute;
-    bottom: 0; left: 0; right: 0;
-    background: #f8f1e3; /* white paper */
-    border-top: 6px solid #3c2f1e; /* dark border */
-    padding: 52px 85px 70px;
+    bottom: 0; 
+    left: 0; 
+    right: 0;
+    background: rgba(248, 241, 227, 0.97);
+    border-top: 6px solid #3c2f1e;
+    padding: 45px 85px 65px;
     z-index: 10;
     cursor: pointer;
     box-shadow: 0 -30px 70px rgba(0,0,0,0.25);
-    min-height: 330px;
-    color: #1a1a1a; /* black text */
+    min-height: 290px;
+    color: #1a1a1a;
 }
 
 #namebox {
@@ -125,7 +142,7 @@ body {
 
 .narration #namebox { display: none; }
 
-/* LETTER BOX - already perfect for white theme */
+/* LETTER BOX */
 #letter-box {
     position: absolute;
     top: 15%;
