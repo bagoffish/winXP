@@ -432,7 +432,7 @@ const gameScreen = document.getElementById('game-screen');
 const creditsScreen = document.getElementById('credits-screen');
 
 const gameMusic = document.getElementById('bgMusic');     // Game BGM
-const titleMusic = document.getElementById('titleMusic'); // Title + Credits
+const titleMusic = document.getElementById('titleMusic'); // Title + Credits BGM
 
 gameMusic.loop = true;
 titleMusic.loop = true;
@@ -441,7 +441,9 @@ titleMusic.loop = true;
 function playTitleMusic() {
     gameMusic.pause();
     titleMusic.src = "/vn/audios/title.ogg";
-    titleMusic.play().catch(() => {});
+    titleMusic.play().catch(() => {
+        console.log("Title music autoplay blocked by browser");
+    });
 }
 
 // Play Game Music
@@ -533,10 +535,17 @@ function startGame() {
     }, 1200);
 }
 
-// Auto-play title music when page loads
-window.onload = function() {
+// Try to play title music as soon as possible
+window.addEventListener('load', () => {
     playTitleMusic();
-};
+});
+
+// Also play on first user interaction (most reliable)
+document.addEventListener('click', () => {
+    if (titleMusic.paused && titleScreen.style.display !== 'none') {
+        playTitleMusic();
+    }
+}, { once: true });
 
 // Click handlers
 textboxEl.addEventListener('click', () => {
