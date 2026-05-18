@@ -420,11 +420,20 @@ const sfxPlayer = document.getElementById('sfx');
 gameMusic.loop = true;
 titleMusic.loop = true;
 
+// SFX - stops immediately when finished
 function playSFX(name) {
-    if (!name) return;
+    if (!name || !sfxPlayer) return;
+    
     sfxPlayer.src = `/vn/audios/${name}.ogg`;
     sfxPlayer.currentTime = 0;
+    
     sfxPlayer.play().catch(() => {});
+    
+    // Stop audio right after it finishes playing
+    sfxPlayer.onended = function() {
+        sfxPlayer.pause();
+        sfxPlayer.currentTime = 0;
+    };
 }
 
 function playTitleMusic() {
@@ -522,7 +531,7 @@ function startGame() {
     }, 1200);
 }
 
-// Title music on load + first click
+// Title music handling
 window.addEventListener('load', () => playTitleMusic());
 
 document.addEventListener('click', () => {
