@@ -73,7 +73,21 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center;
-    transition: none;
+    background-color: #1a1a1a;     /* Dark fallback - prevents white flash */
+    transition: background-image 0.4s ease-in-out;   /* Smooth crossfade */
+    z-index: 1;
+}
+
+/* Extra layer to help with preloading smoothness */
+#background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 2;
 }
 
 #overlay {
