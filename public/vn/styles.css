@@ -90,10 +90,10 @@ body {
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
-    max-height: 48%;           /* Smaller */
+    max-height: 48%;
     max-width: 36%;
     z-index: 5;
-    opacity: 0.85;             /* Semi-transparent */
+    opacity: 0.85;
     transition: opacity 0.8s ease;
     filter: drop-shadow(0 25px 35px rgba(0,0,0,0.5));
 }
@@ -101,9 +101,7 @@ body {
 /* TEXTBOX */
 #textbox {
     position: absolute;
-    bottom: 0; 
-    left: 0; 
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     background: rgba(248, 241, 227, 0.97);
     border-top: 6px solid #3c2f1e;
     padding: 45px 85px 65px;
