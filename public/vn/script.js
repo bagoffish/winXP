@@ -410,7 +410,7 @@ const story = [
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "And when I open the door..." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "He will be holding a letter." },
 
-    { bg: "/vn/images/black.jpg", char: "", name: "", text: "THE END" }
+    { bg: "/vn/images/black.jpg", char: "", name: "", text: "" }
 ];
 
 // ====================== ENGINE ======================
@@ -432,26 +432,29 @@ const gameScreen = document.getElementById('game-screen');
 const creditsScreen = document.getElementById('credits-screen');
 
 const gameMusic = document.getElementById('bgMusic');     // Game BGM
-const titleMusic = document.getElementById('titleMusic'); // Title + Credits BGM
+const titleMusic = document.getElementById('titleMusic'); // Title + Credits
 
 gameMusic.loop = true;
 titleMusic.loop = true;
 
+// Play Title Music
 function playTitleMusic() {
     gameMusic.pause();
     titleMusic.src = "/vn/audios/title.ogg";
     titleMusic.play().catch(() => {});
 }
 
+// Play Game Music
 function playGameMusic() {
     titleMusic.pause();
     gameMusic.src = "/vn/audios/wind.ogg";
     gameMusic.play().catch(() => {});
 }
 
+// Play Credits Music (same as title)
 function playCreditsMusic() {
     gameMusic.pause();
-    titleMusic.src = "/vn/audios/title.ogg";   // Same as title
+    titleMusic.src = "/vn/audios/title.ogg";
     titleMusic.play().catch(() => {});
 }
 
@@ -517,7 +520,7 @@ function endGame() {
 }
 
 function returnToTitle() {
-    window.location.reload();   // Refresh as you requested
+    window.location.reload();
 }
 
 function startGame() {
@@ -529,6 +532,11 @@ function startGame() {
         showLine();
     }, 1200);
 }
+
+// Auto-play title music when page loads
+window.onload = function() {
+    playTitleMusic();
+};
 
 // Click handlers
 textboxEl.addEventListener('click', () => {
