@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Winter Letter</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WINTER LETTER</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="game">
-    <div id="background"></div>
 
-    <div id="namebox"></div>
-
-    <div id="textbox">
-      <p id="text"></p>
-      <span id="continue">▼</span>
+    <!-- TITLE SCREEN -->
+    <div id="title-screen">
+        <div id="title">WINTER LETTER</div>
+        <ul class="menu">
+            <li onclick="startGame()">START</li>
+            <li onclick="alert('Save system coming soon')">LOAD</li>
+            <li onclick="alert('Preferences coming soon')">PREFS</li>
+            <li onclick="alert('A quiet winter story by coy')">ABOUT</li>
+            <li onclick="alert('Click or press Space / Enter to advance')">HELP</li>
+            <li onclick="window.location.href='/'">QUIT</li>
+        </ul>
+        <div class="footer">WINTER LETTER</div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <!-- GAME SCREEN -->
+    <div id="game-screen">
+        <div id="background"></div>
+        <div id="overlay"></div>
+
+        <div id="textbox">
+            <div id="namebox"></div>
+            <div id="text"></div>
+        </div>
+    </div>
+
+    <!-- AUDIO -->
+    <audio id="bgMusic" loop></audio>
+    <audio id="sfx" src="audio/footsteps.ogg"></audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
