@@ -429,6 +429,7 @@ const letterBox = document.getElementById('letter-box');
 const letterText = document.getElementById('letter-text');
 const titleScreen = document.getElementById('title-screen');
 const gameScreen = document.getElementById('game-screen');
+const creditsScreen = document.getElementById('credits-screen');
 const bgMusic = document.getElementById('bgMusic');
 const sfxPlayer = document.getElementById('sfx');
 
@@ -441,33 +442,13 @@ function playSFX(name) {
     sfxPlayer.play().catch(() => {});
 }
 
-function typeText(text, isLetter = false) {
-    clearInterval(interval);
-    if (isLetter) {
-        letterText.textContent = '';
-    } else {
-        textEl.textContent = '';
-    }
-    fullText = text;
-    charIndex = 0;
-    typing = true;
-    interval = setInterval(() => {
-        if (charIndex < fullText.length) {
-            if (isLetter) {
-                letterText.textContent += fullText.charAt(charIndex);
-            } else {
-                textEl.textContent += fullText.charAt(charIndex);
-            }
-            charIndex++;
-        } else {
-            clearInterval(interval);
-            typing = false;
-        }
-    }, 32);
-}
+function typeText(text, isLetter = false) { ... } // keep your existing typeText
 
 function showLine() {
-    if (currentIndex >= story.length) return;
+    if (currentIndex >= story.length) {
+        endGame();
+        return;
+    }
     const line = story[currentIndex];
 
     if (line.bg) bgEl.style.backgroundImage = `url('${line.bg}')`;
@@ -498,6 +479,26 @@ function showLine() {
     playSFX(line.sfx);
 }
 
+function endGame() {
+    // Fade to black
+    const overlay = document.getElementById('overlay');
+    overlay.style.transition = 'background 2s';
+    overlay.style.background = 'rgba(0,0,0,1)';
+
+    setTimeout(() => {
+        gameScreen.style.display = 'none';
+        creditsScreen.style.display = 'flex';
+        bgMusic.pause();
+    }, 2000);
+}
+
+function returnToTitle() {
+    creditsScreen.style.display = 'none';
+    titleScreen.style.display = 'flex';
+    titleScreen.style.opacity = '1';
+    currentIndex = 0;
+}
+
 function startGame() {
     titleScreen.style.opacity = '0';
     setTimeout(() => {
@@ -509,27 +510,9 @@ function startGame() {
     }, 1500);
 }
 
-textboxEl.addEventListener('click', () => {
-    if (typing) {
-        clearInterval(interval);
-        textEl.textContent = fullText;
-        typing = false;
-        return;
-    }
-    currentIndex++;
-    showLine();
-});
-
-letterBox.addEventListener('click', () => {
-    if (typing) {
-        clearInterval(interval);
-        letterText.textContent = fullText;
-        typing = false;
-        return;
-    }
-    currentIndex++;
-    showLine();
-});
+// Keep your existing click and keydown listeners...
+textboxEl.addEventListener('click', () => { ... });
+letterBox.addEventListener('click', () => { ... });
 
 document.addEventListener('keydown', e => {
     if (e.key === ' ' || e.key === 'Enter') {
