@@ -503,9 +503,7 @@ function endGame() {
 }
 
 function returnToTitle() {
-    creditsScreen.style.display = 'none';
-    titleScreen.style.display = 'flex';
-    currentIndex = 0;
+    window.location.reload();   // Simple page refresh
 }
 
 function startGame() {
