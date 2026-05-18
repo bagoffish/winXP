@@ -5,17 +5,18 @@
 body {
     height: 100vh;
     overflow: hidden;
-    background: #000;
+    background: #f8f1e3; /* warm white / paper color */
     font-family: 'EB Garamond', serif;
-    color: #e8e4d9;
+    color: #1a1a1a; /* black text */
     user-select: none;
 }
 
-/* TITLE SCREEN */
+/* TITLE SCREEN - light version */
 #title-screen {
     position: fixed;
     inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)), url('images/title-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(248,241,227,0.85), rgba(248,241,227,0.95)), 
+                url('/vn/images/title-bg.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,40 +25,40 @@ body {
     transition: opacity 2s ease;
 }
 
-#title {
-    font-size: 4.8rem;
-    letter-spacing: 16px;
-    color: #c8d7ff;
-    text-shadow: 0 0 40px #a8b8d8;
-    margin-bottom: 90px;
-    font-weight: 500;
-}
-
-.menu {
-    list-style: none;
-    text-align: center;
-}
-
-.menu li {
+.top-menu {
+    position: absolute;
+    top: 40px;
+    display: flex;
+    gap: 60px;
     font-size: 1.85rem;
-    padding: 14px 50px;
-    margin: 8px 0;
-    cursor: pointer;
     letter-spacing: 5px;
+}
+
+.top-menu a {
+    color: #1a1a1a;
+    text-decoration: none;
+    cursor: pointer;
     transition: all 0.3s;
 }
 
-.menu li:hover {
-    color: white;
-    background: rgba(200, 215, 255, 0.12);
-    transform: scale(1.08);
+.top-menu a:hover {
+    color: #000;
+    text-shadow: 0 0 20px #666;
+}
+
+#title-art img {
+    max-width: 720px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 30px rgba(0,0,0,0.15));
 }
 
 .footer {
     position: absolute;
     bottom: 35px;
     font-size: 1.35rem;
-    color: #666;
+    color: #555;
     letter-spacing: 8px;
 }
 
@@ -79,28 +80,29 @@ body {
 #overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, transparent 50%, rgba(0,0,0,0.75) 100%);
+    background: radial-gradient(circle at center, transparent 60%, rgba(248,241,227,0.85) 100%);
     pointer-events: none;
 }
 
 #textbox {
     position: absolute;
     bottom: 0; left: 0; right: 0;
-    background: rgba(8, 8, 14, 0.96);
-    border-top: 6px solid #a8b8d8;
+    background: #f8f1e3; /* white paper */
+    border-top: 6px solid #3c2f1e; /* dark border */
     padding: 52px 85px 70px;
     z-index: 10;
     cursor: pointer;
-    box-shadow: 0 -30px 70px rgba(0,0,0,0.9);
+    box-shadow: 0 -30px 70px rgba(0,0,0,0.25);
     min-height: 330px;
+    color: #1a1a1a; /* black text */
 }
 
 #namebox {
     display: inline-block;
-    background: #1a1a22;
-    color: #c8d7ff;
+    background: #f8f1e3;
+    color: #1a1a1a;
     padding: 8px 34px;
-    border: 2px solid #c8d7ff;
+    border: 2px solid #3c2f1e;
     font-size: 27px;
     letter-spacing: 4px;
     margin-bottom: 26px;
@@ -110,13 +112,38 @@ body {
     font-size: 29px;
     line-height: 1.82;
     max-width: 980px;
+    color: #1a1a1a;
 }
 
 #text::after {
     content: '|';
     animation: blink 0.95s step-end infinite;
+    color: #1a1a1a;
 }
 
 @keyframes blink { 50% { opacity: 0; } }
 
 .narration #namebox { display: none; }
+
+/* LETTER BOX - already perfect for white theme */
+#letter-box {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 620px;
+    background: #f8f1e3;
+    padding: 60px 50px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    border: 12px solid #3c2f1e;
+    z-index: 20;
+    display: none;
+}
+
+#letter-text {
+    font-size: 26px;
+    line-height: 1.75;
+    color: #1a1a1a;
+    font-family: 'EB Garamond', serif;
+    white-space: pre-wrap;
+}
