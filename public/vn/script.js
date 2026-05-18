@@ -484,12 +484,22 @@ function showLine() {
 }
 
 function endGame() {
+    // Fade out game screen
+    gameScreen.style.transition = 'opacity 1.8s ease';
     gameScreen.style.opacity = '0';
+
     setTimeout(() => {
         gameScreen.style.display = 'none';
+        
+        // Show credits with fade in
         creditsScreen.style.display = 'flex';
+        // Trigger fade in
+        setTimeout(() => {
+            creditsScreen.style.opacity = '1';
+        }, 50);
+        
         bgMusic.pause();
-    }, 1500);
+    }, 1800);
 }
 
 function returnToTitle() {
