@@ -74,7 +74,7 @@ body {
     inset: 0;
     background-size: cover;
     background-position: center;
-    transition: background-image 3s ease-in-out;
+    transition: none;
 }
 
 #overlay {
