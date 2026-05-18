@@ -22,13 +22,19 @@
     <div id="game-screen">
         <div id="background"></div>
         <div id="overlay"></div>
-        
+
         <!-- Character sprite -->
         <img id="character" src="" alt="" style="position: absolute; bottom: 18%; left: 50%; transform: translateX(-50%); max-height: 68%; z-index: 5; opacity: 0; transition: opacity 0.8s ease;">
 
+        <!-- Normal textbox -->
         <div id="textbox">
             <div id="namebox"></div>
             <div id="text"></div>
+        </div>
+
+        <!-- Special Letter display -->
+        <div id="letter-box" style="display: none; position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 620px; background: #f8f1e3; padding: 60px 50px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 12px solid #d4b89c; z-index: 20;">
+            <div id="letter-text" style="font-size: 26px; line-height: 1.75; color: #3c2f1e; font-family: 'EB Garamond', serif; white-space: pre-wrap;"></div>
         </div>
     </div>
 
