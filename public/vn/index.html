@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WINTER LETTER</title>
+  <style>
+    body, html { margin:0; padding:0; width:100%; height:100%; background:#000; overflow:hidden; font-family: Georgia, serif; }
+    #vn { width:100%; height:100%; position:relative; background:url('/images/road.jpg') center/cover no-repeat; }
+    #textbox { position:absolute; bottom:0; width:100%; background:rgba(0,0,0,0.78); color:white; padding:24px; box-sizing:border-box; }
+    #name { font-weight:bold; margin-bottom:10px; font-size:22px; }
+    #text { font-size:24px; line-height:1.5; min-height:100px; }
+    #hint { opacity:.6; font-size:14px; margin-top:12px; }
+  </style>
+</head>
+<body>
+<div id="vn">
+  <div id="textbox">
+    <div id="name"></div>
+    <div id="text"></div>
+    <div id="hint">click to continue</div>
+  </div>
+</div>
+<script>
+const scenes = [
+  {speaker:'Me', text:'I killed a man in winter.'},
+  {speaker:'Me', text:'Though I cannot say with certainty which winter it was.'},
+  {speaker:'Me', text:'Winter repeats itself too faithfully.'},
+  {speaker:'Old Man', text:'Need something?'},
+  {speaker:'Me', text:'Just looking.'},
+  {speaker:'Stranger', text:'...'}
+];
+let index = 0, typing = false, full = '';
+const nameEl = document.getElementById('name');
+const textEl = document.getElementById('text');
+function typeLine() {
+  const s = scenes[index]; full = s.text; nameEl.textContent = s.speaker; textEl.textContent=''; typing = true; let i=0;
+  const t = setInterval(()=>{ textEl.textContent = full.slice(0, ++i); if(i>=full.length){ clearInterval(t); typing=false; } }, 28);
+}
+function next() {
+  if (typing) { textEl.textContent = full; typing = false; return; }
+  if (index < scenes.length - 1) { index++; typeLine(); }
+}
+document.getElementById('vn').addEventListener('click', next);
+typeLine();
+</script>
+</body>
+</html>
