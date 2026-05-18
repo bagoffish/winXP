@@ -240,7 +240,7 @@ const story = [
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "It was as though the man had not existed before I killed him." },
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "And therefore could not be missed afterward." },
 
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "At first, I listened for every footstep outside my room.", sfx: "footsteps" },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "At first, I listened for every footstep outside my room." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Every knock at the door made my hands go numb." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I burned the coat I had worn that night." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I scrubbed the knife until the wooden handle cracked from hot water." },
