@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    font-family: 'EB Garamond', serif;
+    color: #e8e4d9;
+    user-select: none;
+}
+
+/* TITLE SCREEN */
+#title-screen {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)), url('images/title-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: opacity 2s ease;
+}
+
+#title {
+    font-size: 4.8rem;
+    letter-spacing: 16px;
+    color: #c8d7ff;
+    text-shadow: 0 0 40px #a8b8d8;
+    margin-bottom: 90px;
+    font-weight: 500;
+}
+
+.menu {
+    list-style: none;
+    text-align: center;
+}
+
+.menu li {
+    font-size: 1.85rem;
+    padding: 14px 50px;
+    margin: 8px 0;
+    cursor: pointer;
+    letter-spacing: 5px;
+    transition: all 0.3s;
+}
+
+.menu li:hover {
+    color: white;
+    background: rgba(200, 215, 255, 0.12);
+    transform: scale(1.08);
+}
+
+.footer {
+    position: absolute;
+    bottom: 35px;
+    font-size: 1.35rem;
+    color: #666;
+    letter-spacing: 8px;
+}
+
+/* GAME SCREEN */
+#game-screen {
+    position: fixed;
+    inset: 0;
+    display: none;
+}
+
+#background {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 3s ease-in-out;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 50%, rgba(0,0,0,0.75) 100%);
+    pointer-events: none;
+}
+
+#textbox {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(8, 8, 14, 0.96);
+    border-top: 6px solid #a8b8d8;
+    padding: 52px 85px 70px;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 -30px 70px rgba(0,0,0,0.9);
+    min-height: 330px;
+}
+
+#namebox {
+    display: inline-block;
+    background: #1a1a22;
+    color: #c8d7ff;
+    padding: 8px 34px;
+    border: 2px solid #c8d7ff;
+    font-size: 27px;
+    letter-spacing: 4px;
+    margin-bottom: 26px;
+}
+
+#text {
+    font-size: 29px;
+    line-height: 1.82;
+    max-width: 980px;
+}
+
+#text::after {
+    content: '|';
+    animation: blink 0.95s step-end infinite;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.narration #namebox { display: none; }
