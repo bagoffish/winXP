@@ -23,12 +23,12 @@ const story = [
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The kind that makes the joints of the hand ache before the skin has even begun to sting." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The air that evening was so sharp it seemed to have corners." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Each breath cut my throat on the way down." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Snow had fallen earlier in the day." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Snow had fallen earlier in the day.", sfx: "footsteps" },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Then stopped." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The wooded hillside became unnaturally still." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "As if every sound had been packed under the white crust and buried there." },
 
-    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "My boots sank into the road with a muffled crunch." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "My boots sank into the road with a muffled crunch.", sfx: "footsteps" },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Too loud." },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Though there was no one close enough to hear." },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The road was not much of a road." },
@@ -58,25 +58,7 @@ const story = [
     { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "As if confirming the knife was real." },
     { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "And not merely an intention." },
 
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I had not gone out with a plan." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Or so I told myself then." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "There had been no quarrel." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "No debt." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "No insult that demanded satisfaction." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I had spent the afternoon in my rented room." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Staring at wallpaper peeling near the stove." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Unable to read." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Unable to sleep." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Unable even to think in a coherent sequence." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "A pressure had been building in me for weeks." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Perhaps months." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "A sensation not unlike standing at the top of a staircase." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "And feeling, with dreadful fascination, how easy it would be to let yourself fall." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "There are impulses that arrive not from hatred." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "But from vacancy." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "One wants to see whether the world will change shape if something irreversible is done to it." },
-
-    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "So I walked." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "So I walked.", sfx: "footsteps" },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Dusk came early." },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "It always does in winter." },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The light thinned between the trees until everything seemed submerged." },
@@ -107,7 +89,7 @@ const story = [
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "But with a blank certainty." },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "If I keep walking..." },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Something will happen that can never be undone." },
-    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I kept walking." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I kept walking.", sfx: "footsteps" },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "My heartbeat did not quicken." },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "That surprises me even now." },
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "One imagines murder as frenzy." },
@@ -118,8 +100,8 @@ const story = [
 
     { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/stranger-back.png", name: "Stranger", text: "...?" },
 
-    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "My right hand moved." },
-    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "The knife entered beneath his ribs." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "My right hand moved.", sfx: "stab" },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "The knife entered beneath his ribs.", sfx: "stab" },
     { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "That is where I had imagined it would go." },
     { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "Though I did not know until that instant that I had imagined anything at all." },
     { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "Me", text: "There was resistance first." },
@@ -176,13 +158,13 @@ const story = [
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Someone might come." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "And if someone came..." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Then all of this would become real." },
-    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I dragged him by the ankles." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I dragged him by the ankles.", sfx: "drag" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "He was heavier than I expected." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Dead weight." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "People say that phrase casually." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "They do not know how literal it feels." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "His coat kept catching on frozen roots beneath the snow." },
-    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "His head struck stones as we moved." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "His head struck stones as we moved.", sfx: "hit" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "A dull sound." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Again." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "And again." },
@@ -197,8 +179,8 @@ const story = [
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "It was not." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "The frost had hardened the soil to the consistency of brick." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I had no shovel." },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I used a branch first." },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "It snapped." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I used a branch first.", sfx: "woodbreak" },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "It snapped.", sfx: "woodbreak" },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Then the knife." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "The blade bent slightly." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Then my hands." },
@@ -208,7 +190,7 @@ const story = [
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "The skin across my knuckles split." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I could not feel my fingertips." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Several times, I stopped." },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I thought I heard footsteps on the road." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I thought I heard footsteps on the road.", sfx: "footsteps" },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "But it was only my own heartbeat." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "The hole was too shallow." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I knew that even as I lowered him into it." },
@@ -228,7 +210,7 @@ const story = [
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Fingers pushing through the loose earth." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "As if reaching upward." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "As if asking for help." },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I struck it with the branch." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I struck it with the branch.", sfx: "woodbreak" },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Once." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Twice." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Until it disappeared." },
@@ -245,7 +227,7 @@ const story = [
     { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Because if I had not laughed..." },
     { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I think I would have screamed so loudly the whole hillside would have answered." },
 
-    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I moved away the following spring." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I moved away the following spring.", sfx: "train" },
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "No one came for me." },
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "That was the strangest part." },
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The world did not rearrange itself around the act." },
@@ -258,8 +240,8 @@ const story = [
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "It was as though the man had not existed before I killed him." },
     { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "And therefore could not be missed afterward." },
 
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "At first, I listened for every footstep outside my room." },
-    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Every knock at the door made my hands go numb." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "At first, I listened for every footstep outside my room.", sfx: "footsteps" },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Every knock at the door made my hands go numb.", sfx: "knock" },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I burned the coat I had worn that night." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "I scrubbed the knife until the wooden handle cracked from hot water." },
     { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Then one evening..." },
@@ -292,8 +274,8 @@ const story = [
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Because they prove this happened in a real place." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "And not merely in the theater of a fever." },
 
-    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The knocking came." },
-    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Three times." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "The knocking came.", sfx: "knock" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Three times.", sfx: "knock" },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Soft." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Polite." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "Me", text: "Not the pounding of a drunk." },
@@ -374,7 +356,7 @@ const story = [
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "But guilt is a kind of obedience." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "It trains the soul to answer accusation even when spoken by the dead." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "I took the iron poker." },
-    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "And struck the floor." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "And struck the floor.", sfx: "woodbreak" },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Once." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Twice." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "On the third blow..." },
@@ -399,8 +381,8 @@ const story = [
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Myself." },
 
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "As I write this..." },
-    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Someone is knocking again." },
-    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Three times." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Someone is knocking again.", sfx: "knock" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Three times.", sfx: "knock" },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Soft." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "Polite." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "And from the way the boards creak outside..." },
@@ -431,29 +413,32 @@ const titleScreen = document.getElementById('title-screen');
 const gameScreen = document.getElementById('game-screen');
 const creditsScreen = document.getElementById('credits-screen');
 
-const gameMusic = document.getElementById('bgMusic');     // Game BGM
-const titleMusic = document.getElementById('titleMusic'); // Title + Credits BGM
+const gameMusic = document.getElementById('bgMusic');
+const titleMusic = document.getElementById('titleMusic');
+const sfxPlayer = document.getElementById('sfx');
 
 gameMusic.loop = true;
 titleMusic.loop = true;
 
-// Play Title Music
+function playSFX(name) {
+    if (!name) return;
+    sfxPlayer.src = `/vn/audios/${name}.ogg`;
+    sfxPlayer.currentTime = 0;
+    sfxPlayer.play().catch(() => {});
+}
+
 function playTitleMusic() {
     gameMusic.pause();
     titleMusic.src = "/vn/audios/title.ogg";
-    titleMusic.play().catch(() => {
-        console.log("Title music autoplay blocked by browser");
-    });
+    titleMusic.play().catch(() => {});
 }
 
-// Play Game Music
 function playGameMusic() {
     titleMusic.pause();
     gameMusic.src = "/vn/audios/wind.ogg";
     gameMusic.play().catch(() => {});
 }
 
-// Play Credits Music (same as title)
 function playCreditsMusic() {
     gameMusic.pause();
     titleMusic.src = "/vn/audios/title.ogg";
@@ -507,6 +492,8 @@ function showLine() {
         else textboxEl.classList.remove('narration');
         typeText(line.text, false);
     }
+
+    if (line.sfx) playSFX(line.sfx);
 }
 
 function endGame() {
@@ -535,12 +522,9 @@ function startGame() {
     }, 1200);
 }
 
-// Try to play title music as soon as possible
-window.addEventListener('load', () => {
-    playTitleMusic();
-});
+// Title music on load + first click
+window.addEventListener('load', () => playTitleMusic());
 
-// Also play on first user interaction (most reliable)
 document.addEventListener('click', () => {
     if (titleMusic.paused && titleScreen.style.display !== 'none') {
         playTitleMusic();
