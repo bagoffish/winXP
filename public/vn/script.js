@@ -210,9 +210,9 @@ const story = [
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Fingers pushing through the loose earth." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "As if reaching upward." },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "As if asking for help." },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I struck it with the branch.", sfx: "hit" },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Once." },
-    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Twice." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "I struck it with the branch." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Once.", sfx: "hit" },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Twice.", sfx: "hit" },
     { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "Until it disappeared." },
 
     { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "Me", text: "When it was done..." },
