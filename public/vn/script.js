@@ -391,8 +391,6 @@ const story = [
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "I know it is me." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "And when I open the door..." },
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "He will be holding a letter." },
-
-    { bg: "/vn/images/black.jpg", char: "", name: "", text: "" }
 ];
 
 // ====================== ENGINE ======================
