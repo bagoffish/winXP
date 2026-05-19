@@ -1,4 +1,4 @@
-// ====================== STORY DATA ======================
+// ====================== STORY DATA (English) ======================
 const story = [
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-shocked.png", name: "Me", text: "I killed a man in winter." },
     { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral-3.png", name: "Me", text: "Though I cannot say with certainty which winter it was." },
@@ -391,12 +391,383 @@ const story = [
     { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "Me", text: "He will be holding a letter." },
 ];
 
+// ====================== STORY DATA (Korean) ======================
+const storyKO = [
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "나는 겨울에 한 남자를 죽였다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "그것이 정확히 어느 겨울이었는지는 확실히 말할 수 없다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그것이 첫 번째 난관이다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "내가 그를 죽였다는 사실이 아니라." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 점만큼은, 오래된 일에 대해 사람이 가질 수 있는 확신의 한계까지는 확실하다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 계절이 한 해를 통째로 삼켜버렸다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "겨울은 너무도 충실하게 반복된다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "매번 내리는 눈은 이전 눈과 닮아 있다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "모든 벌거벗은 나무는 같은 표정을 짓고 있다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "고발하는 듯한 표정." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "죄책감에 한 번 닿은 시간은 더 이상 직선으로 흐르지 않는다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "가장자리가 부드러워지고." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "어두운 방에서 위층을 걷는 누군가의 무게에 낡은 마루판이 꺼지듯, 기억 아래로 꺼져버린다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그래도..." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 추위를 기억한다." },
+
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "실내에서 말하는 그런 추위가 아니다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "이불을 둘둘 말고 있는 추위가 아니다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "바닥 난방이 깔리고 주전자가 보글보글 끓는 그런 추위가 아니다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "손톱부터 스며드는 추위다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "피부가 따끔거리기 전에 손마디가 먼저 저려오는 추위." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그날 저녁 공기는 모서리가 있을 것처럼 날카로웠다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "숨을 들이쉴 때마다 목이 베이는 듯했다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그날 낮에 눈이 내렸다.", sfx: "footsteps" },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "그러다 멈췄다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "나무가 우거진 언덕은 부자연스럽게 고요해졌다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "모든 소리가 하얀 껍질 아래에 짓눌려 묻힌 것처럼." },
+
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "내 부츠가 길에 푹푹 박히며 낮은 소리를 냈다.", sfx: "footsteps" },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "너무 컸다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "주변에 들을 사람이 없다는 걸 알면서도." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 길은 사실 길이라고 할 것도 없었다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "인천 외곽 마을 위로, 나무 사이를 지나가는 좁은 얼어붙은 흙길이었다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "도시가 농지로 희미해지는 곳." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "바다 바람이 맨가지 사이로 불어오는 곳." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "가족이 대대로 그 근처에 살아야만 지도에 나오는 그런 길." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "나는 그 길을 여러 번 걸었다." },
+    { bg: "/vn/images/bg-road.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "코트 주머니에 칼을 넣고 걸은 적은 한 번도 없었다." },
+
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/oldman-neutral.png", name: "노인", text: "필요한 거라도?" },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral-2.png", name: "나", text: "그냥 보고 있는 겁니다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/oldman-neutral.png", name: "노인", text: "여기엔 그냥 구경하러 오는 사람은 없는데." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "가게 주인은 안경이 너무 두꺼워서 눈이 얼굴에서 따로 떠 있는 것처럼 보였다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "렌즈 뒤에서 따로 떠 있는 것처럼." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "칼은 나무 손잡이였다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "약간 검은색." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "날은 12센티미터 조금 안 됐다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "가격을 기억한다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/oldman-neutral.png", name: "노인", text: "12,000원." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "정확히 12,000원." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그때는 너무 평범한 물건치고 비싸다고 생각했었다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "자루 근처에 작은 흠이 있었다. 금속이 제대로 다듬어지지 않은 부분." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "엄지손가락이 그 흠을 자주 찾았다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "장갑 속에서 그 흠을 계속 문지르고 있었다." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "칼이 진짜라는 것을 확인하려는 듯이." },
+    { bg: "/vn/images/bg-shop.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그저 의도에 불과한 것이 아니라는 듯이." },
+
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "그래서 나는 걸었다.", sfx: "footsteps" },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "황혼이 일찍 찾아왔다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "겨울에는 늘 그렇다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "나무 사이로 빛이 희미해지며 모든 것이 물속에 잠긴 듯했다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "언덕 전체가 얼어붙은 바다 밑바닥으로 가라앉은 것처럼." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그때 그를 보았다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그는 길가에 서 있었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "오래전에 죽어 검은 발톱처럼 된 삼나무 근처에." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그는 특별한 일을 하고 있지 않았다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "지금 생각하면 그것이 가장 무섭다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그는 그저 서 있었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "편지를 읽고 있었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "모자가 이마 위로 살짝 젖혀져 있었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "빛이 희미해져서 얼굴 가까이 편지를 들고 있었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "한 번은 장갑 낀 손을 들어 종이에 묻은 눈을 털어냈다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아주 작은 동작이었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "너무 인간적이었다." },
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "이미 뒤에서 다가오고 있는 것을 전혀 모르고 있었다." },
+
+    { bg: "/vn/images/bg-forest-dusk.jpg", char: "/vn/images/stranger-back.png", name: "낯선 사람", text: "...?" },
+
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "내 오른손이 움직였다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "칼이 그의 갈비뼈 아래로 들어갔다.", sfx: "stab" },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "내가 상상했던 바로 그곳이었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그 순간까지 내가 그런 상상을 했다는 것도 몰랐다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "처음에는 저항이 있었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "코트." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그 아래 셔츠." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그 후에는..." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "아무것도 없었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "칼이 그를 뚫고 들어가는 것이 너무도 쉽고 추악해서 화가 날 정도였다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "살은 저항해야 한다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "뼈는 막아야 한다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "하지만 몸은 이미 강철을 받아들이기 위해 스스로 열려 있었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그는 편지를 떨어뜨렸다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "얼굴이 위로 향한 채 눈 위에 떨어졌다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "검은 글씨가 하얀 눈 위에 선명했다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그는 축축한 숨막힘 소리를 냈다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "우리는 함께 미끄러졌다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "내 부츠가 미끄러졌다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "우리 둘 다 넘어졌다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그가 넘어지면서 칼이 옆으로 찢어졌다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "따뜻한 것이 내 손 위로 터져 나왔다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "순간 내가 베인 줄 알았다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "하지만 그것은 그의 피였다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "장갑을 적시고." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "그 열기가 놀라웠다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-hurt.png", name: "나", text: "눈 위에 떨어지자 김이 피어올랐다." },
+
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "그리고 그는 나를 보았다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "증오도 없었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "두려움도 없었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "그저 혼란스러워했다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "끔찍하고 친밀한 당혹감." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "나를 어디선가 본 듯한 표정이었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "나", text: "그의 어린 시절이나 꿈속에 있었던 얼굴처럼." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/stranger-face.png", name: "낯선 사람", text: "...아..." },
+
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "나는 한동안 그 위에 서 있었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "얼마나 오래였는지는 모른다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "언덕은 완전히 고요해졌다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "항구에서 불어오는 바람마저 물러난 듯했다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "이 일에 관여하고 싶지 않은 것처럼." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "내 숨이 창백한 구름이 되어 우리 위로 피어올랐다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "오른손에는 여전히 칼을 쥐고 있었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "손목이 아프다는 것을 깨달았다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "칼을 찌른 탓이 아니었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "손잡이를 너무 세게 움켜쥐고 있었기 때문이었다." },
+
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그리고 실용적인 생각이 떠올랐다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "공포도 아니었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "후회도 아니었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그저 간단한 사실들의 나열이었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "시체가 드러나 있었다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "이 길은 영원히 비어 있지 않을 것이다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "누군가 올지도 모른다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그리고 누군가 오면..." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "이 모든 것이 현실이 된다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "나는 그의 발목을 잡고 끌었다.", sfx: "drag" },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "생각보다 무거웠다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "죽은 무게." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "사람들은 그 말을 가볍게 한다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "얼마나 문자 그대로인지는 모른다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 코트가 눈 아래 얼어붙은 뿌리에 걸렸다." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 머리가 돌에 부딪혔다.", sfx: "hit" },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "둔탁한 소리." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "다시." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "또 다시.", sfx: "hit" },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "그 소리는 지금도 나를 깨운다." },
+
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "삼나무는 나무 더 깊은 곳에 서 있었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "죽어 있었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "오래전에 벼락을 맞아 갈라졌다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "한쪽 줄기가 썩어 있었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "뿌리가 갈비뼈처럼 땅 위로 솟아 있었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "땅이 더 부드러워 보였기 때문에 그곳을 선택했다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그렇지 않았다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "서리가 흙을 벽돌처럼 단단하게 만들었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "삽이 없었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "먼저 나뭇가지를 사용했다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "부러졌다.", sfx: "woodbreak" },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그 다음 칼을 썼다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "날이 살짝 휘었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그리고 맨손으로." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "추위가 너무 강렬해서 추위라는 느낌마저 사라졌다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그저 고통만 남았다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "손톱 아래로 흙이 들어갔다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "손등의 피부가 갈라졌다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "손끝 감각이 없었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "몇 번이고 멈췄다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "길에서 발소리가 들리는 것 같았다.", sfx: "footsteps" },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "하지만 그것은 내 심장 소리였다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "구멍은 너무 얕았다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그를 내려놓으면서도 알았다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 무릎이 펴지지 않았다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "한 팔이 등 아래로 꺾였다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "더 깊게 파려고 그를 끌어올릴 뻔했다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그때 그의 얼굴이 나를 향했다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "눈을 뜨고 있었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "눈 속에 눈이 녹아 들어갔다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "가슴속에서 무언가가 움츠러들었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "나는 두 손으로 흙을 퍼서 그 위에 덮었다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "너무 서둘렀다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그가 제대로 덮였는지도 거의 신경 쓰지 않았다." },
+
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "한 번은..." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 손이 다시 나왔다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "손가락이 헐거운 흙을 헤치며 올라왔다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "도움을 청하는 듯이." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "나는 나뭇가지로 그 손을 내리쳤다." },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "한 번.", sfx: "hit" },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "두 번.", sfx: "hit" },
+    { bg: "/vn/images/bg-cedar.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그것이 사라질 때까지." },
+
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "모든 것이 끝났을 때..." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "나는 흐트러진 눈 위에 서 있었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "헐떡이며." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "진흙으로 뒤덮여 있었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "피로 뒤덮여 있었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그리고..." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "나는 웃기 시작했다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "웃긴 일이어서가 아니었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "고요함이 견딜 수 없었기 때문이었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "웃지 않았다면..." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "온 언덕이 다 들을 정도로 비명을 지를 것 같았기 때문이었다." },
+
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 다음 봄에 나는 이사를 갔다.", sfx: "train" },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "아무도 나를 찾아오지 않았다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그게 가장 이상한 부분이었다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "세상은 그 행위 주위로 재배치되지 않았다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "역 근처에서 호떡을 파는 아줌마는 여전히 매일 저녁 가판을 밝혔다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "교회 확성기는 일요일 아침마다 여전히 지직거렸다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아이들은 학교 운동장에서 반쯤 얼어붙은 축구공을 차고 놀았다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "형사는 나타나지 않았다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "수배 전단도 붙지 않았다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "실종된 여행자도 없었다." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "내가 죽인 그 남자는 처음부터 존재하지 않았던 것처럼." },
+    { bg: "/vn/images/bg-train.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그래서 나중에 사라졌다고 해도 아무도 알아차리지 못했다." },
+
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-2.png", name: "나", text: "처음에는 방 밖 발소리 하나하나에 귀를 기울였다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "문 두드리는 소리만 들어도 손이 저렸다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그날 입었던 코트를 태웠다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "칼을 뜨거운 물로 문질러 나무 손잡이가 갈라질 때까지 씻었다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그러던 어느 날 저녁..." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "하루 종일 그를 생각하지 않았다는 걸 깨달았다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "그게 살인보다 더 무서웠다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "마음은 무엇이든 소화할 수 있다는 뜻이었으니까." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "시간만 충분하면." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "세월이 흘렀다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아니면 몇 달." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "확실히 말할 수 없다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "세 군데 구역에서 살았다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아마 네 군데." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "이름도 모르는 건물의 작은 방들." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "말을 거의 하지 않아도 되는 일을 했다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-2.png", name: "나", text: "거울을 피했다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "꿈을 자주 꾸었다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "부츠 아래 눈." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "길 위의 편지." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral-3.png", name: "나", text: "너무 늦게 돌아보는 남자." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "하지만 깨어나는 것은 언제나 안도였다." },
+    { bg: "/vn/images/bg-room.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "어젯밤까지는." },
+
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "지금 내가 있는 방은 하숙집 3층이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "벽지는 녹색이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "난로 연기로 인해 오래된 멍처럼 어두워졌다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아래층 과부는 매일 밤 자정 조금 지나면 기침을 한다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "비가 오면 복도 마루가 부풀어 오른다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그래서 손잡이를 돌릴 때 문을 들어 올리지 않으면 열리지 않는다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "이런 세부 사항들이 중요하다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "이 모든 것이 실제 장소에서 일어났다는 증거이기 때문이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그저 열에 들뜬 꿈속이 아니라는 증거." },
+
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "노크 소리가 났다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "세 번.", sfx: "knock" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "부드럽게." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "예의 바르게." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "술 취한 사람의 거친 두드림이 아니었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "집주인도 아니었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "각 노크 사이의 간격이 정확히 같았다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "누군가 조용히 숫자를 세며 하는 것처럼." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아래층 과부의 기침이 멈췄다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "불이 작게 탁탁 소리를 냈다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그러자 온 집이 숨을 죽인 듯했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "문을 열었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "복도는 비어 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "저쪽 끝 램프가 깜빡였다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "발소리도 없었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "아무 소리도 없었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "고개를 숙여 보았다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "마루판 위에 봉투가 놓여 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "축축했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "종이 위에 얇은 습기가 번져 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "눈 속에 두고 온 것처럼." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "주소도 없었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "봉인도 없었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "한쪽 구석에 어두운 얼룩만 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "주우려고 몸을 숙였다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그리고 물러섰다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "종이가 따뜻했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "방 온도가 아니었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "살처럼 따뜻했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "살아 있는 것처럼 따뜻했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "안에는 한 장의 접힌 종이가 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 필체를 단번에 알아보았다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "한 번도 본 적 없었는데도." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 문장은 불가능하다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "하지만 사실이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "어떤 패턴은 눈으로 아는 것이 아니라." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "공포로 아는 것이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "첫 줄을 읽기도 전에 속이 뒤집혔다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "그 기울어진 선을 어디서 보았는지 깨달았기 때문이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "눈 위에 떨어져 있던 그 종이에서." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-neutral.png", name: "나", text: "내가 그를 죽이기 전에 그가 읽고 있던 그 편지에서." },
+
+    // Letter parts
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/letter.png", name: "", text: "이 글을 읽고 있다면...", isLetter: true },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/letter.png", name: "", text: "나는 이미 너를 죽인 후다.", isLetter: true },
+
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "나는 비명을 질렀다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "의도한 것이 아니었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "소리가 저절로 새어 나왔다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "뒤로 비틀거렸다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "등불을 넘어뜨렸다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "기름이 바닥에 쏟아졌다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "다행히 불은 붙지 않았다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "문에서 시선을 뗄 수 없었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "누군가 들어올 것 같았다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "눈으로 젖은 누군가." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "내가 얼어붙은 흙으로 덮었던 얼굴을 한 누군가." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "아무도 들어오지 않았다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "시간이 흘렀다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "아마 더 오래." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "결국..." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "공포가 길어지면 강박이 된다..." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "나는 다시 편지를 집어 들었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "그리고 나머지를 읽었다." },
+
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "너는 나를 모른다. 네가 나를 죽였다고 생각하지만.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "오히려 내가 몇 년 전부터 너를 선택했다.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "네가 어떤 사람이 될지 알고 있었다.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "네가 걸을 길을 알고 있었다.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "네가 만날 낯선 이를 알고 있었다.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "네가 들고 다닐 칼을 알고 있었다.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "내가 그곳에 서 있었던 것은 이미 그렇게 써 두었기 때문이다.", isLetter: true },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "나는 항상 그렇게 써 왔다.", isLetter: true },
+
+    { bg: "/vn/images/black.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "맨 아래에는 마지막 한 줄이 있었다." },
+    { bg: "/vn/images/black.jpg", char: "/vn/images/letter.png", name: "", text: "네 마루 밑을 보아라.", isLetter: true },
+
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "도망쳤어야 했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "정상적인 사람이라면 도망쳤을 것이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "하지만 죄책감은 일종의 복종이다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "죽은 자의 고발에도 영혼이 대답하도록 훈련시킨다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "나는 쇠 부지깽이를 들었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "그리고 바닥을 내리쳤다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "한 번.", sfx: "woodbreak" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "두 번.", sfx: "woodbreak" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "세 번째로..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "판자가 갈라졌다.", sfx: "woodbreak" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "그 아래에 빈 공간이 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "누렇게 변한 이불보에 싸여..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "시체가 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "신선했다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "썩은 냄새가 나지 않았다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "해골도 아니었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "방금 죽은 듯한 남자였다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "창백한 피부." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "가슴에 좁은 상처 하나." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "손톱 아래 진흙이 끼어 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "그대로 얼어붙어 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "그것은 나였다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "내 얼굴." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "입이 살짝 벌어져 있었다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "왼쪽 눈썹 위 어린 시절 흉터." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "낯선 사람이 알 리 없는 흉터." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked.png", name: "나", text: "바로 나였다." },
+
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "이 글을 쓰고 있는 지금..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "누군가 다시 노크하고 있다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "세 번.", sfx: "knock" },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "부드럽게." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "예의 바르게." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "그리고 문밖 마루가 삐걱거리는 소리와..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "문턱 너머 숨소리의 리듬으로..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "두 번째 심장처럼 스며든 이상한 확신으로..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "그가 바로 나라는 것을 안다." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "문이 열리면..." },
+    { bg: "/vn/images/bg-room-night.jpg", char: "/vn/images/me-shocked-2.png", name: "나", text: "그는 편지를 들고 있을 것이다." },
+];
+
 // ====================== ENGINE ======================
 let currentIndex = 0;
 let typing = false;
 let fullText = '';
 let charIndex = 0;
 let interval;
+let currentLang = 'en'; // 'en' or 'ko'
 
 const bgEl = document.getElementById('background');
 const charEl = document.getElementById('character');
@@ -416,7 +787,7 @@ const sfxPlayer = document.getElementById('sfx');
 gameMusic.loop = true;
 titleMusic.loop = true;
 
-// Preload all backgrounds to prevent white flash
+// Preload all backgrounds
 function preloadBackgrounds() {
     const uniqueBgs = [...new Set(story.map(line => line.bg).filter(Boolean))];
     uniqueBgs.forEach(src => {
@@ -425,20 +796,19 @@ function preloadBackgrounds() {
     });
 }
 
-// SFX - stops immediately when finished
+// SFX
 function playSFX(name) {
     if (!name || !sfxPlayer) return;
-    
     sfxPlayer.src = `/vn/audios/${name}.ogg`;
     sfxPlayer.currentTime = 0;
     sfxPlayer.play().catch(() => {});
-    
-    sfxPlayer.onended = function() {
+    sfxPlayer.onended = () => {
         sfxPlayer.pause();
         sfxPlayer.currentTime = 0;
     };
 }
 
+// Music
 function playTitleMusic() {
     gameMusic.pause();
     titleMusic.src = "/vn/audios/title.ogg";
@@ -457,6 +827,21 @@ function playCreditsMusic() {
     titleMusic.play().catch(() => {});
 }
 
+// Language System
+const storyKO = [ /* Put your full Korean story here later */ ];
+
+function getCurrentStory() {
+    return currentLang === 'ko' ? storyKO : story;
+}
+
+function toggleLanguage() {
+    currentLang = currentLang === 'en' ? 'ko' : 'en';
+    alert(currentLang === 'ko' 
+        ? "언어가 한국어로 변경되었습니다.\n게임을 시작하면 한국어로 진행됩니다." 
+        : "Language changed to English.");
+}
+
+// Typewriter
 function typeText(text, isLetter = false) {
     clearInterval(interval);
     if (isLetter) letterText.textContent = '';
@@ -477,16 +862,14 @@ function typeText(text, isLetter = false) {
 }
 
 function showLine() {
-    if (currentIndex >= story.length) {
+    const currentStory = getCurrentStory();
+    if (currentIndex >= currentStory.length) {
         endGame();
         return;
     }
-    const line = story[currentIndex];
+    const line = currentStory[currentIndex];
 
-    // Smooth background change (no white flash)
-    if (line.bg) {
-        bgEl.style.backgroundImage = `url('${line.bg}')`;
-    }
+    if (line.bg) bgEl.style.backgroundImage = `url('${line.bg}')`;
 
     if (line.char && charEl) {
         charEl.src = line.char;
@@ -533,6 +916,7 @@ function startGame() {
         titleScreen.style.display = 'none';
         gameScreen.style.display = 'block';
         playGameMusic();
+        currentIndex = 0;
         showLine();
     }, 1200);
 }
@@ -540,7 +924,7 @@ function startGame() {
 // Initialize
 window.addEventListener('load', () => {
     playTitleMusic();
-    preloadBackgrounds();   // Preload all images
+    preloadBackgrounds();
 });
 
 document.addEventListener('click', () => {
