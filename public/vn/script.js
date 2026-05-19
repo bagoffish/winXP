@@ -787,7 +787,7 @@ const sfxPlayer = document.getElementById('sfx');
 gameMusic.loop = true;
 titleMusic.loop = true;
 
-// Preload all backgrounds
+// Preload backgrounds
 function preloadBackgrounds() {
     const uniqueBgs = [...new Set(story.map(line => line.bg).filter(Boolean))];
     uniqueBgs.forEach(src => {
@@ -796,7 +796,7 @@ function preloadBackgrounds() {
     });
 }
 
-// SFX - stops immediately when finished
+// SFX
 function playSFX(name) {
     if (!name || !sfxPlayer) return;
     sfxPlayer.src = `/vn/audios/${name}.ogg`;
@@ -832,19 +832,34 @@ function getCurrentStory() {
     return currentLang === 'ko' ? storyKO : story;
 }
 
+function updateMenu() {
+    const links = document.querySelectorAll('.top-menu a');
+    if (currentLang === 'ko') {
+        links[0].textContent = "시작";
+        links[1].textContent = "소개";
+        links[2].textContent = "영어";
+        links[3].textContent = "종료";
+        // Title
+        const titleImg = document.querySelector('#title-art img');
+        if (titleImg) titleImg.alt = "겨울의 편지";
+    } else {
+        links[0].textContent = "start";
+        links[1].textContent = "about";
+        links[2].textContent = "korean";
+        links[3].textContent = "quit";
+    }
+}
+
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'ko' : 'en';
-    const msg = currentLang === 'ko'
-        ? "언어가 한국어로 변경되었습니다.\n게임을 시작하면 한국어로 진행됩니다."
-        : "Language changed to English.";
-    alert(msg);
+    updateMenu();
+    
+    alert(currentLang === 'ko' 
+        ? "언어가 한국어로 변경되었습니다." 
+        : "Language changed to English.");
 }
 
-function showAbout() {
-    alert("A quiet winter story by coy\nWinter Letter");
-}
-
-// Typewriter
+// Typewriter (unchanged)
 function typeText(text, isLetter = false) {
     clearInterval(interval);
     if (isLetter) letterText.textContent = '';
@@ -928,6 +943,7 @@ function startGame() {
 window.addEventListener('load', () => {
     playTitleMusic();
     preloadBackgrounds();
+    updateMenu();           // Set initial menu text
 });
 
 document.addEventListener('click', () => {
