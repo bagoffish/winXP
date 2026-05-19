@@ -163,7 +163,7 @@ function Socials({ onClose }) {
                 Steam
               </a>
               <a
-                href="https://open.spotify.com/user/31c5k3olrsrvyfeldxjvklzs7omy"
+                href="https://open.spotify.com/user/fossils-mx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -182,6 +182,13 @@ function Socials({ onClose }) {
                 rel="noopener noreferrer"
               >
                 Toyhouse
+              </a>
+              <a
+                href="https://soundcloud.com/coral"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                SoundCloud
               </a>
               <a
                 href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
