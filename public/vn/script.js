@@ -787,13 +787,31 @@ const sfxPlayer = document.getElementById('sfx');
 gameMusic.loop = true;
 titleMusic.loop = true;
 
-// Preload backgrounds
-function preloadBackgrounds() {
-    const uniqueBgs = [...new Set(story.map(line => line.bg).filter(Boolean))];
-    uniqueBgs.forEach(src => {
-        const img = new Image();
-        img.src = src;
-    });
+// Stop all music
+function stopAllMusic() {
+    gameMusic.pause();
+    titleMusic.pause();
+    gameMusic.currentTime = 0;
+    titleMusic.currentTime = 0;
+}
+
+// Music
+function playTitleMusic() {
+    stopAllMusic();
+    titleMusic.src = "/vn/audios/title.ogg";
+    titleMusic.play().catch(() => {});
+}
+
+function playGameMusic() {
+    stopAllMusic();
+    gameMusic.src = "/vn/audios/wind.ogg";
+    gameMusic.play().catch(() => {});
+}
+
+function playCreditsMusic() {
+    stopAllMusic();
+    titleMusic.src = "/vn/audios/title.ogg";
+    titleMusic.play().catch(() => {});
 }
 
 // SFX
@@ -808,26 +826,16 @@ function playSFX(name) {
     };
 }
 
-// Music
-function playTitleMusic() {
-    gameMusic.pause();
-    titleMusic.src = "/vn/audios/title.ogg";
-    titleMusic.play().catch(() => {});
+// Preload backgrounds
+function preloadBackgrounds() {
+    const uniqueBgs = [...new Set(story.map(line => line.bg).filter(Boolean))];
+    uniqueBgs.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
 }
 
-function playGameMusic() {
-    titleMusic.pause();
-    gameMusic.src = "/vn/audios/wind.ogg";
-    gameMusic.play().catch(() => {});
-}
-
-function playCreditsMusic() {
-    gameMusic.pause();
-    titleMusic.src = "/vn/audios/title.ogg";
-    titleMusic.play().catch(() => {});
-}
-
-// ====================== LANGUAGE SYSTEM ======================
+// Language System
 function getCurrentStory() {
     return currentLang === 'ko' ? storyKO : story;
 }
@@ -836,17 +844,12 @@ function updateMenu() {
     const links = document.querySelectorAll('.top-menu a');
     if (currentLang === 'ko') {
         links[0].textContent = "시작";
-        links[1].textContent = "소개";
-        links[2].textContent = "영어";
-        links[3].textContent = "종료";
-        // Title
-        const titleImg = document.querySelector('#title-art img');
-        if (titleImg) titleImg.alt = "겨울의 편지";
+        links[1].textContent = "영어";
+        links[2].textContent = "종료";
     } else {
-        links[0].textContent = "start";
-        links[1].textContent = "about";
-        links[2].textContent = "korean";
-        links[3].textContent = "quit";
+        links[0].textContent = "START";
+        links[1].textContent = "KOREAN";
+        links[2].textContent = "QUIT";
     }
 }
 
@@ -859,7 +862,7 @@ function toggleLanguage() {
         : "Language changed to English.");
 }
 
-// Typewriter (unchanged)
+// Typewriter
 function typeText(text, isLetter = false) {
     clearInterval(interval);
     if (isLetter) letterText.textContent = '';
@@ -943,7 +946,7 @@ function startGame() {
 window.addEventListener('load', () => {
     playTitleMusic();
     preloadBackgrounds();
-    updateMenu();           // Set initial menu text
+    updateMenu();
 });
 
 document.addEventListener('click', () => {
