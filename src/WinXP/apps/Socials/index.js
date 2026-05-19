@@ -197,13 +197,6 @@ function Socials({ onClose }) {
               >
                 Music Project
               </a>
-              <a
-                href="https://time.is/KST"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                My Time Zone
-              </a>
               <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
             </div>
           </div>
