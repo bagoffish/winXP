@@ -530,7 +530,7 @@ const storyKO = [
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "이 모든 것이 현실이 된다." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "나는 그의 발목을 잡고 끌었다.", sfx: "drag" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "생각보다 무거웠다." },
-    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "죽은 무게." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "무거운 짐. (Dead weight.)" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "사람들은 그 말을 가볍게 한다." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "얼마나 문자 그대로인지는 모른다." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 코트가 눈 아래 얼어붙은 뿌리에 걸렸다." },
