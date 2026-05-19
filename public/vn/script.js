@@ -536,7 +536,7 @@ const storyKO = [
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 코트가 눈 아래 얼어붙은 뿌리에 걸렸다." },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "그의 머리가 돌에 부딪혔다.", sfx: "hit" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "둔탁한 소리." },
-    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "다시." },
+    { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "다시.", sfx: "hit" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt.png", name: "나", text: "또 다시.", sfx: "hit" },
     { bg: "/vn/images/bg-forest-night.jpg", char: "/vn/images/me-hurt-2.png", name: "나", text: "그 소리는 지금도 나를 깨운다." },
 
