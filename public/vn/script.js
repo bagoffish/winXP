@@ -796,7 +796,7 @@ function preloadBackgrounds() {
     });
 }
 
-// SFX
+// SFX - stops immediately when finished
 function playSFX(name) {
     if (!name || !sfxPlayer) return;
     sfxPlayer.src = `/vn/audios/${name}.ogg`;
@@ -827,18 +827,21 @@ function playCreditsMusic() {
     titleMusic.play().catch(() => {});
 }
 
-// Language System
-const storyKO = [ /* Put your full Korean story here later */ ];
-
+// ====================== LANGUAGE SYSTEM ======================
 function getCurrentStory() {
     return currentLang === 'ko' ? storyKO : story;
 }
 
 function toggleLanguage() {
     currentLang = currentLang === 'en' ? 'ko' : 'en';
-    alert(currentLang === 'ko' 
-        ? "언어가 한국어로 변경되었습니다.\n게임을 시작하면 한국어로 진행됩니다." 
-        : "Language changed to English.");
+    const msg = currentLang === 'ko'
+        ? "언어가 한국어로 변경되었습니다.\n게임을 시작하면 한국어로 진행됩니다."
+        : "Language changed to English.";
+    alert(msg);
+}
+
+function showAbout() {
+    alert("A quiet winter story by coy\nWinter Letter");
 }
 
 // Typewriter
