@@ -252,8 +252,8 @@ Genres: Philosophy, horror eroge, ero guro, body horror,
 
 RECOMMENDATIONS —
 TV Shows: Mr. Robot & American Gods
-Visual Novels: Saya no Uta, Steins;Gate, Katawa Shoujo,
-               Teaching Feeling, Higurashi & SubaHibi
+Visual Novels: Saya no Uta, Steins;Gate, Katawa Shoujo, Higurashi,
+               Teaching Feeling, Your Wings My wings,  & SubaHibi
 Mangas: Tokyo Akazukin, Null-Meta, Sayonara Zetsubou Sensei, Ashizuri Suizokukan,
         Shadow Star, Made in Abyss, Mai-chan’s Daily Life & Shimeji Simulation
 Animes: A Silent Voice, Monster, Inuyashiki, Bungo Stray Dogs,
