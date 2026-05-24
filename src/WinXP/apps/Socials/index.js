@@ -170,7 +170,7 @@ function Socials({ onClose }) {
                 Spotify
               </a>
               <a
-                href="https://www.last.fm/user/kinoue64"
+                href="https://www.last.fm/user/drum"
                 target="_blank"
                 rel="noopener noreferrer"
               >
