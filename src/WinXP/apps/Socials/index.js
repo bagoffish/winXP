@@ -177,7 +177,7 @@ function Socials({ onClose }) {
                 Last.fm
               </a>
               <a
-                href="https://toyhou.se/bagoffish"
+                href="https://toyhou.se/fossils"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -197,7 +197,7 @@ function Socials({ onClose }) {
               >
                 Music Project
               </a>
-              <a href="mailto:c@bagof.fish">Email - c@bagof.fish</a>
+              <a href="mailto:fossils@gmail.com">Email - fossils@gmail.com</a>
             </div>
           </div>
         </div>
