@@ -191,7 +191,7 @@ function Socials({ onClose }) {
                 SoundCloud
               </a>
               <a
-                href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
+                href="https://open.spotify.com/artist/1zw5S00K1P3fYHzPqfRkFn"
                 target="_blank"
                 rel="noopener noreferrer"
               >
