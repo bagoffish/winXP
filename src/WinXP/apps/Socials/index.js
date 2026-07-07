@@ -190,12 +190,26 @@ function Socials({ onClose }) {
               >
                 SoundCloud
               </a>
+                <a
+                href="https://rateyourmusic.com/~bagoffish"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Rate Your Music
+              </a>
               <a
                 href="https://open.spotify.com/artist/567cGc3PvmxiZFQCwjcaRq"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Music Project
+                Music Project - Spotify
+              </a>
+              <a
+                href="https://bagoffish.bandcamp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Music Project - Bandcamp
               </a>
               <a href="mailto:fossils@gmail.com">Email - fossils@gmail.com</a>
             </div>
