@@ -221,7 +221,9 @@ function AboutMe({ onClose }) {
   );
 }
 
-const ABOUT_TEXT_BEFORE = `My name is Coy
+const ABOUT_TEXT_BEFORE = `My name is Coy.
+Birthday: July 29th 2009
+Currently residing in: Incheon, South Korea
 
 I won't list anything majorly personal here; I believe you should learn from me.
 If that deters you in any way, I think you should walk along, 
