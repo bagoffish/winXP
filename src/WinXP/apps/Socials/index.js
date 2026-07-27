@@ -156,13 +156,6 @@ function Socials({ onClose }) {
           <div className="page">
             <div className="links">
               <a
-                href="https://steamcommunity.com/id/koiponds/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Steam
-              </a>
-              <a
                 href="https://open.spotify.com/user/fossils-mx"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -175,13 +168,6 @@ function Socials({ onClose }) {
                 rel="noopener noreferrer"
               >
                 Last.fm
-              </a>
-              <a
-                href="https://toyhou.se/fossils"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Toyhouse
               </a>
               <a
                 href="https://soundcloud.com/coral"
