@@ -623,8 +623,8 @@ const Div = styled.div`
   }
   .ie__content__inner {
     position: relative;
-    min-height: 800px;
-    min-width: 800px;
+    min-height: 100%;
+    min-width: 100%;
     width: 100%;
     height: 100%;
   }
