@@ -24,17 +24,17 @@ import stop from "assets/windowsIcons/stop.png";
 import windows from "assets/windowsIcons/windows.png";
 import dropdown from "assets/windowsIcons/dropdown.png";
 
-function Checker({ onClose }) {
+function Renderer({ onClose }) {
   // Address text shown in IE bar
-  const addressText = useMemo(() => "https://bagof.fish/checker", []);
+  const addressText = useMemo(() => "https://bagof.fish/renderer", []);
 
   useEffect(() => {
     // inject legacy script once
-    if (document.getElementById("legacy-checker-script")) return;
+    if (document.getElementById("legacy-renderer-script")) return;
 
     const s = document.createElement("script");
-    s.id = "legacy-checker-script";
-    s.src = "/js/checker.js"; // must exist in public/js/checker.js
+    s.id = "legacy-renderer-script";
+    s.src = "/js/renderer.js"; // must exist in public/js/renderer.js
     s.async = true;
     document.body.appendChild(s);
   }, []);
@@ -168,18 +168,18 @@ function Checker({ onClose }) {
 
       <div className="ie__content">
         <div className="ie__content__inner">
-          {/* XP-style Checker app content */}
-          <div className="checkerRoot">
-            <div className="checkerPanel">
-              <div className="checkerMenu">
-                <div className="checkerMenuItem">File</div>
-                <div className="checkerMenuItem">Edit</div>
-                <div className="checkerMenuItem">Help</div>
+          {/* XP-style Renderer app content */}
+          <div className="rendererRoot">
+            <div className="rendererPanel">
+              <div className="rendererMenu">
+                <div className="rendererMenuItem">File</div>
+                <div className="rendererMenuItem">Edit</div>
+                <div className="rendererMenuItem">Help</div>
               </div>
 
-              <div className="checkerContent">
-                <div id="checker-container" className="checkerContainer">
-                  <h1 className="checkerTitle">AVATAR RENDERER</h1>
+              <div className="rendererContent">
+                <div id="renderer-container" className="rendererContainer">
+                  <h1 className="rendererTitle">AVATAR RENDERER</h1>
 
                   <div id="input-wrapper" className="inputWrapper">
                     <div id="input-row" className="inputRow">
@@ -247,12 +247,12 @@ const legacyCss = `
 }
 .shake { animation: shake 0.5s; }
 
-.checkerRoot{
+.rendererRoot{
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
-.checkerPanel{
+.rendererPanel{
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -260,7 +260,7 @@ const legacyCss = `
   box-shadow: inset 0 0 0 1px #fff;
   background: #ece9d8;
 }
-.checkerMenu{
+.rendererMenu{
   display: flex;
   gap: 14px;
   padding: 3px 8px;
@@ -270,11 +270,11 @@ const legacyCss = `
   font-size: 12px;
   user-select: none;
 }
-.checkerMenuItem{
+.rendererMenuItem{
   padding: 2px 4px;
   cursor: default;
 }
-.checkerContent{
+.rendererContent{
   flex: 1;
   background: #fff;
   border-top: 1px solid #fff;
@@ -283,7 +283,7 @@ const legacyCss = `
   font-family: Tahoma, Verdana, sans-serif;
   color: #000;
 }
-.checkerContainer{
+.rendererContainer{
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
@@ -292,7 +292,7 @@ const legacyCss = `
   align-items: center;
   gap: 10px;
 }
-.checkerTitle{
+.rendererTitle{
   margin: 0 0 4px 0;
   font-size: 14px;
   font-weight: bold;
@@ -328,7 +328,7 @@ const legacyCss = `
   cursor: pointer;
 }
 .messageBox{
-  display: none; /* checker.js toggles to flex */
+  display: none; /* renderer.js toggles to flex */
   height: 30px;
   border: 1px solid #c75050;
   color: #c75050;
@@ -340,7 +340,7 @@ const legacyCss = `
   background: #fff;
 }
 .loadingIndicator{
-  display: none; /* checker.js toggles to flex */
+  display: none; /* renderer.js toggles to flex */
   gap: 8px;
   font-weight: bold;
   font-family: Tahoma, Verdana, sans-serif;
@@ -371,7 +371,7 @@ const legacyCss = `
   box-sizing: border-box;
 }
 
-/* Your result boxes (used by checker.js) */
+/* Your result boxes (used by renderer.js) */
 .info-box{
   width: 100%;
   border: 1px solid #808080;
@@ -691,4 +691,4 @@ const Div = styled.div`
   }
 `;
 
-export default Checker;
+export default Renderer;
