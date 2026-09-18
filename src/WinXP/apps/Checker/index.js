@@ -179,7 +179,7 @@ function Checker({ onClose }) {
 
               <div className="checkerContent">
                 <div id="checker-container" className="checkerContainer">
-                  <h1 className="checkerTitle">ʕっ•ᴥ•ʔっ OUTFIT CHECKER</h1>
+                  <h1 className="checkerTitle">AVATAR RENDERER</h1>
 
                   <div id="input-wrapper" className="inputWrapper">
                     <div id="input-row" className="inputRow">
