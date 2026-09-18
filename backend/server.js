@@ -68,6 +68,26 @@ function saveToCache(fingerprint) {
   }
 }
 
+// Merges a freshly-parsed avatar list into whatever is already in the
+// index for this id, instead of overwriting it. A given Roblox id can
+// legitimately appear in more than one chunk file (scraped at different
+// times), and every one of those sightings should be kept — the old
+// behavior silently dropped whichever chunk didn't process last.
+function mergeAvatars(id, avatars) {
+  const existing = avatarIndex.get(id);
+  if (!existing) {
+    avatarIndex.set(id, avatars);
+    return;
+  }
+  const seenUrls = new Set(existing.map((a) => a.url));
+  for (const a of avatars) {
+    if (!seenUrls.has(a.url)) {
+      existing.push(a);
+      seenUrls.add(a.url);
+    }
+  }
+}
+
 function parseFilesInWorker(files) {
   return new Promise((resolve, reject) => {
     const worker = new Worker(WORKER_PATH, { workerData: { files } });
@@ -101,7 +121,7 @@ async function buildFromChunksParallel(files) {
 
   for (const entries of results) {
     for (const [id, avatars] of entries) {
-      avatarIndex.set(id, avatars);
+      mergeAvatars(id, avatars);
     }
   }
 
