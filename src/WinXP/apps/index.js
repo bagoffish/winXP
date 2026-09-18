@@ -200,8 +200,8 @@ export const appSettings = {
     },
     component: Checker,
     defaultSize: {
-      width: 620,
-      height: 560,
+      width: 660,
+      height: 600,
     },
     defaultOffset: {
       x: 210,
