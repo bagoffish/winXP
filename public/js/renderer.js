@@ -2,7 +2,7 @@
   // Use your Render backend (works right now)
   const API_BASE = "https://bagoffish-f4qd.onrender.com";
 
-  function initChecker() {
+  function initRenderer() {
     const usernameInput = document.getElementById("usernameInput");
     const checkBtn = document.getElementById("checkBtn");
     const messageBox = document.getElementById("messageBox");
@@ -161,10 +161,10 @@
     return true;
   }
 
-  // React mount timing: retry until the Checker app DOM exists
+  // React mount timing: retry until the Renderer app DOM exists
   let tries = 0;
   const t = setInterval(() => {
     tries += 1;
-    if (initChecker() || tries > 80) clearInterval(t);
+    if (initRenderer() || tries > 80) clearInterval(t);
   }, 100);
 })();
