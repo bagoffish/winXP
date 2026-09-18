@@ -41,6 +41,26 @@
       setTimeout(() => messageBox.classList.remove("shake"), 500);
     }
 
+    // Preload a list of image URLs in parallel and resolve once every
+    // image has either loaded or failed. Browser caches the decoded
+    // image, so injecting the same <img src="..."> afterwards renders
+    // instantly instead of triggering a fresh (slow, sequential) fetch.
+    function preloadImages(urls) {
+      const unique = [...new Set(urls.filter(Boolean))];
+      return Promise.all(
+        unique.map(
+          (src) =>
+            new Promise((resolve) => {
+              const img = new Image();
+              img.decoding = "async";
+              img.onload = () => resolve(src);
+              img.onerror = () => resolve(src);
+              img.src = src;
+            })
+        )
+      );
+    }
+
     usernameInput.addEventListener("input", () => {
       messageBox.style.display = "none";
       messageBox.textContent = "";
@@ -69,6 +89,15 @@
         const roblox = data.roblox;
         const rolimons = data.rolimons || {};
 
+        const oldAvatars = Array.isArray(roblox.oldAvatars) ? roblox.oldAvatars : [];
+
+        // Kick off every image fetch at once (current avatar + all old
+        // avatars) instead of letting the browser discover them one by
+        // one as innerHTML is parsed. By the time we render, they're
+        // already sitting in the browser's image cache.
+        const imageUrls = [roblox.avatarUrl, ...oldAvatars.map((img) => img.wayback)];
+        await preloadImages(imageUrls);
+
         const terminationText = rolimons.terminated
           ? `<p style="color:#c75050;font-weight:bold;margin:6px 0;">TERMINATED ACCOUNT</p>`
           : "";
@@ -82,7 +111,7 @@
           <div class="info-box">
             <div class="avatar-container">
               <a href="https://www.roblox.com/users/${roblox.id}/profile" target="_blank" rel="noopener">
-                <img src="${roblox.avatarUrl || ""}" alt="">
+                <img src="${roblox.avatarUrl || ""}" alt="" loading="eager" decoding="async">
               </a>
             </div>
 
@@ -108,10 +137,12 @@
         const oldAvatarsContainer = document.getElementById("oldAvatars");
         if (oldAvatarsContainer) oldAvatarsContainer.innerHTML = "";
 
-        if (Array.isArray(roblox.oldAvatars) && roblox.oldAvatars.length && oldAvatarsContainer) {
-          roblox.oldAvatars.forEach((img) => {
+        if (oldAvatars.length && oldAvatarsContainer) {
+          oldAvatars.forEach((img) => {
             const thumb = document.createElement("img");
             thumb.src = img.wayback;
+            thumb.loading = "eager";
+            thumb.decoding = "async";
             thumb.className = "old-avatar-thumb";
             thumb.onclick = () => window.open(img.wayback, "_blank", "noopener,noreferrer");
             oldAvatarsContainer.appendChild(thumb);
