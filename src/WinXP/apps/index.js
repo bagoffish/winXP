@@ -1,5 +1,5 @@
 import AboutMe from "./AboutMe";
-import Checker from "./Checker";
+import Renderer from "./Renderer";
 import ErrorBox from "./ErrorBox";
 import Minesweeper from "./Minesweeper";
 import Paint from "./Paint";
@@ -20,8 +20,8 @@ import poemsIcon from "assets/windowsIcons/327(32x32).png";
 import poemsIconSmall from "assets/windowsIcons/327(16x16).png";
 import socialsIcon from "assets/windowsIcons/ie.png";
 import socialsIconSmall from "assets/windowsIcons/ie-paper.png";
-import checkerIcon from "assets/windowsIcons/299(32x32).png";
-import checkerIconSmall from "assets/windowsIcons/299(32x32).png";
+import RendererIcon from "assets/windowsIcons/299(32x32).png";
+import RendererIconSmall from "assets/windowsIcons/299(32x32).png";
 
 const gen = () => {
   let id = -1;
@@ -103,9 +103,9 @@ export const defaultIconState = [
   },
   {
     id: 3,
-    icon: checkerIcon,
-    title: "Checker",
-    component: Checker,
+    icon: RendererIcon,
+    title: "Renderer",
+    component: Renderer,
     isFocus: false,
   },
   {
@@ -193,12 +193,12 @@ export const appSettings = {
     multiInstance: true,
   },
 
-  Checker: {
+  Renderer: {
     header: {
-      icon: checkerIconSmall,
-      title: "Checker",
+      icon: RendererIconSmall,
+      title: "Renderer",
     },
-    component: Checker,
+    component: Renderer,
     defaultSize: {
       width: 660,
       height: 600,
@@ -275,7 +275,6 @@ export const appSettings = {
     multiInstance: true,
   },
 
-  /* ✅ FIXED WINAMP */
   Winamp: {
     header: {
       icon: winamp, // ← FIX HERE
@@ -303,7 +302,7 @@ export {
   AboutMe,
   Socials,
   Poems,
-  Checker,
+  Renderer,
   Minesweeper,
   ErrorBox,
   Paint,
